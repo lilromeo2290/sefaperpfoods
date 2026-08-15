@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <defs>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E8D5A3"/>
+      <stop offset="0.5" stop-color="#D4AF37"/>
+      <stop offset="1" stop-color="#B8943D"/>
+    </linearGradient>
+    <linearGradient id="burgundyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7A1F26"/>
+      <stop offset="1" stop-color="#5A1419"/>
+    </linearGradient>
+  </defs>
+  <!-- Emblem (left) -->
+  <g transform="translate(50 50)">
+    <circle cx="0" cy="0" r="44" fill="none" stroke="url(#goldGrad)" stroke-width="2"/>
+    <circle cx="0" cy="0" r="40" fill="none" stroke="url(#goldGrad)" stroke-width="1"/>
+    <!-- Mini S -->
+    <path d="M -10 -22 C -22 -22 -28 -16 -28 -8 C -28 0 -18 4 -10 4 C -2 4 4 8 4 16 C 4 24 -2 28 -14 28 C -22 28 -28 24 -30 18" 
+          stroke="url(#burgundyGrad)" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <!-- Mini cloche -->
+    <g transform="translate(20 -5)">
+      <path d="M -10 8 Q -10 -8 0 -10 Q 10 -8 10 8 Z" fill="url(#goldGrad)"/>
+      <circle cx="0" cy="-12" r="2" fill="url(#goldGrad)"/>
+      <rect x="-12" y="7" width="24" height="2" rx="1" fill="url(#goldGrad)"/>
+    </g>
+  </g>
+  <!-- Wordmark -->
+  <text x="110" y="42" font-family="Playfair Display, Georgia, serif" font-size="28" font-weight="800" fill="url(#burgundyGrad)" letter-spacing="0.5">SEFAKOR</text>
+  <text x="110" y="68" font-family="Playfair Display, Georgia, serif" font-size="14" font-weight="600" fill="url(#goldGrad)" letter-spacing="6">FOODS</text>
+  <text x="110" y="88" font-family="Georgia, serif" font-size="9" font-style="italic" fill="#6B1C23" letter-spacing="2">Quality · Taste · Trust</text>
+</svg>

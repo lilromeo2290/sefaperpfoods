@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFE082"/>
+      <stop offset="1" stop-color="#FFF8E1"/>
+    </linearGradient>
+    <linearGradient id="land" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D4AF37"/>
+      <stop offset="1" stop-color="#B8941F"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <ellipse cx="900" cy="180" rx="120" ry="80" fill="#fff" opacity=".55"/>
+  <ellipse cx="700" cy="140" rx="80" ry="50" fill="#fff" opacity=".45"/>
+  <path d="M0 520 L1200 520 L1200 800 L0 800 Z" fill="url(#land)"/>
+  <!-- factory building -->
+  <rect x="200" y="380" width="600" height="160" fill="#5D4037"/>
+  <rect x="200" y="380" width="600" height="20" fill="#3E2723"/>
+  <polygon points="200,380 280,320 360,380" fill="#7B5E4F"/>
+  <polygon points="500,380 580,320 660,380" fill="#7B5E4F"/>
+  <!-- chimney -->
+  <rect x="640" y="280" width="50" height="100" fill="#3E2723"/>
+  <ellipse cx="665" cy="280" rx="40" ry="14" fill="#fff" opacity=".7"/>
+  <!-- windows -->
+  <rect x="240" y="430" width="60" height="60" fill="#FFE082" stroke="#3E2723" stroke-width="3"/>
+  <rect x="340" y="430" width="60" height="60" fill="#FFE082" stroke="#3E2723" stroke-width="3"/>
+  <rect x="440" y="430" width="60" height="60" fill="#FFE082" stroke="#3E2723" stroke-width="3"/>
+  <rect x="540" y="430" width="60" height="60" fill="#FFE082" stroke="#3E2723" stroke-width="3"/>
+  <rect x="640" y="430" width="60" height="60" fill="#FFE082" stroke="#3E2723" stroke-width="3"/>
+  <!-- sign -->
+  <rect x="240" y="490" width="460" height="40" fill="#FFF8E1"/>
+  <text x="470" y="517" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#5D4037">SEFAKOR BROTHERS FOODS</text>
+  <!-- palm trees -->
+  <g transform="translate(100 380)">
+    <rect x="-6" y="0" width="12" height="160" fill="#5D4037"/>
+    <path d="M0 0 q-60 -30 -80 -10 q40 30 80 10 z" fill="#2E7D32"/>
+    <path d="M0 0 q60 -30 80 -10 q-40 30 -80 10 z" fill="#2E7D32"/>
+    <path d="M0 0 q-30 -60 -10 -80 q30 40 10 80 z" fill="#2E7D32"/>
+    <path d="M0 0 q30 -60 10 -80 q-30 40 -10 80 z" fill="#2E7D32"/>
+  </g>
+  <g transform="translate(1050 380)">
+    <rect x="-6" y="0" width="12" height="160" fill="#5D4037"/>
+    <path d="M0 0 q-60 -30 -80 -10 q40 30 80 10 z" fill="#2E7D32"/>
+    <path d="M0 0 q60 -30 80 -10 q-40 30 -80 10 z" fill="#2E7D32"/>
+    <path d="M0 0 q-30 -60 -10 -80 q30 40 10 80 z" fill="#2E7D32"/>
+    <path d="M0 0 q30 -60 10 -80 q-30 40 -10 80 z" fill="#2E7D32"/>
+  </g>
+  <!-- ground texture -->
+  <ellipse cx="600" cy="710" rx="600" ry="40" fill="#3E2723" opacity=".15"/>
+</svg>

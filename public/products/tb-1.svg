@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF8E1"/>
+      <stop offset="1" stop-color="#F5EAC4"/>
+    </linearGradient>
+    <linearGradient id="pkg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF8E1"/>
+      <stop offset="1" stop-color="#5D4037" stop-opacity=".15"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <circle cx="400" cy="400" r="320" fill="#FFF8E1" opacity=".4"/>
+  <ellipse cx="400" cy="720" rx="240" ry="22" fill="#5D4037" opacity=".18"/>
+  <!-- packet body -->
+  <rect x="230" y="180" width="340" height="440" rx="18" fill="url(#pkg)" stroke="#5D4037" stroke-width="2"/>
+  <!-- top seal -->
+  <path d="M230 180 H570 L555 220 H245 Z" fill="#5D4037"/>
+  <path d="M230 620 H570 L555 580 H245 Z" fill="#5D4037"/>
+  <!-- accent band -->
+  <rect x="230" y="340" width="340" height="80" fill="#D4AF37"/>
+  <rect x="230" y="340" width="340" height="6" fill="#fff" opacity=".35"/>
+  <rect x="230" y="414" width="340" height="6" fill="#000" opacity=".15"/>
+  <!-- label -->
+  <text x="400" y="265" text-anchor="middle" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#5D4037">SBF</text>
+  <text x="400" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#5D4037" letter-spacing="3">SEFAKOR BROTHERS FOODS</text>
+  <text x="400" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#3E2723" letter-spacing="2">TOM BROWN POWDER</text>
+  <text x="400" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#5D4037">Roasted Maize • Soybean • Groundnut</text>
+  <text x="400" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#5D4037">Stone-ground in Dzodze, Volta Region</text>
+  <text x="400" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7B5E4F">NET WT 400g • AUTHENTIC GHANAIAN TASTE</text>
+  <text x="400" y="568" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#B8941F">★ ★ ★ ★ ★  •  No preservatives</text>
+</svg>

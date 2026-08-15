@@ -1,0 +1,259 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  /* Brand colors — Burgundy + Gold + Cream */
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-burgundy: var(--burgundy);
+  --color-burgundy-light: var(--burgundy-light);
+  --color-burgundy-dark: var(--burgundy-dark);
+  --color-brown: var(--burgundy);
+  --color-brown-dark: var(--burgundy-dark);
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-brand-red: var(--brand-red);
+  --color-brand-green: var(--brand-green);
+}
+
+:root {
+  --radius: 0.75rem;
+  /* SBF Foods brand palette — extracted from official logo */
+  --gold: #D4AF37;
+  --gold-light: #E8D5A3;
+  --gold-dark: #B8943D;
+  --burgundy: #6B1C23;
+  --burgundy-light: #8B2A33;
+  --burgundy-dark: #4A0F14;
+  --cream: #FAF8F5;
+  --cream-dark: #F0E6D2;
+  --brand-red: #C62828;
+  --brand-green: #2E7D32;
+
+  --background: #FDFBF7;
+  --foreground: #2A1418;
+  --card: #FFFFFF;
+  --card-foreground: #2A1418;
+  --popover: #FFFFFF;
+  --popover-foreground: #2A1418;
+  --primary: #6B1C23;
+  --primary-foreground: #FAF8F5;
+  --secondary: #F0E6D2;
+  --secondary-foreground: #6B1C23;
+  --muted: #F5EFE3;
+  --muted-foreground: #8B6B5A;
+  --accent: #D4AF37;
+  --accent-foreground: #4A0F14;
+  --destructive: #C62828;
+  --border: #E8D9B5;
+  --input: #E8D9B5;
+  --ring: #D4AF37;
+  --chart-1: #6B1C23;
+  --chart-2: #D4AF37;
+  --chart-3: #2E7D32;
+  --chart-4: #C62828;
+  --chart-5: #B8943D;
+  --sidebar: #FAF8F5;
+  --sidebar-foreground: #4A0F14;
+  --sidebar-primary: #6B1C23;
+  --sidebar-primary-foreground: #FAF8F5;
+  --sidebar-accent: #D4AF37;
+  --sidebar-accent-foreground: #4A0F14;
+  --sidebar-border: #E8D9B5;
+  --sidebar-ring: #D4AF37;
+}
+
+.dark {
+  --background: #1A0A0C;
+  --foreground: #FAF8F5;
+  --card: #2A1418;
+  --card-foreground: #FAF8F5;
+  --popover: #2A1418;
+  --popover-foreground: #FAF8F5;
+  --primary: #D4AF37;
+  --primary-foreground: #1A0A0C;
+  --secondary: #4A0F14;
+  --secondary-foreground: #FAF8F5;
+  --muted: #4A0F14;
+  --muted-foreground: #D4AF37;
+  --accent: #D4AF37;
+  --accent-foreground: #1A0A0C;
+  --destructive: #EF5350;
+  --border: #4A0F14;
+  --input: #4A0F14;
+  --ring: #D4AF37;
+  --chart-1: #D4AF37;
+  --chart-2: #8B2A33;
+  --chart-3: #66BB6A;
+  --chart-4: #EF5350;
+  --chart-5: #E8D5A3;
+  --sidebar: #2A1418;
+  --sidebar-foreground: #FAF8F5;
+  --sidebar-primary: #D4AF37;
+  --sidebar-primary-foreground: #1A0A0C;
+  --sidebar-accent: #6B1C23;
+  --sidebar-accent-foreground: #FAF8F5;
+  --sidebar-border: #4A0F14;
+  --sidebar-ring: #D4AF37;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply text-foreground;
+    background-color: #FDFBF7;
+    font-feature-settings: "ss01", "cv11";
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display), var(--font-geist-sans), serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  .bg-grain {
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(212, 175, 55, 0.15) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
+  /* Burgundy + Gold pattern inspired by the logo */
+  .bg-ghana-pattern {
+    background-color: #FAF8F5;
+    background-image:
+      linear-gradient(135deg, rgba(212, 175, 55, 0.10) 25%, transparent 25%),
+      linear-gradient(225deg, rgba(212, 175, 55, 0.10) 25%, transparent 25%),
+      linear-gradient(45deg, rgba(107, 28, 35, 0.06) 25%, transparent 25%),
+      linear-gradient(315deg, rgba(107, 28, 35, 0.06) 25%, transparent 25%);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px, 30px 30px, 0 0;
+  }
+  .gradient-gold {
+    background: linear-gradient(135deg, #E8D5A3 0%, #D4AF37 50%, #B8943D 100%);
+  }
+  .gradient-burgundy {
+    background: linear-gradient(135deg, #8B2A33 0%, #6B1C23 50%, #4A0F14 100%);
+  }
+  .gradient-hero {
+    background:
+      radial-gradient(ellipse at top, rgba(212, 175, 55, 0.22), transparent 60%),
+      radial-gradient(ellipse at bottom right, rgba(107, 28, 35, 0.15), transparent 60%),
+      linear-gradient(180deg, #FAF8F5 0%, #FDFBF7 100%);
+  }
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #E8D5A3 0%, #D4AF37 50%, #B8943D 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-burgundy {
+    background: linear-gradient(135deg, #8B2A33 0%, #6B1C23 50%, #4A0F14 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .shadow-gold {
+    box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.6);
+  }
+  .shadow-burgundy {
+    box-shadow: 0 10px 30px -10px rgba(107, 28, 35, 0.5);
+  }
+  .shadow-brown {
+    box-shadow: 0 10px 30px -10px rgba(107, 28, 35, 0.4);
+  }
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #D4AF37 transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #D4AF37;
+    border-radius: 3px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  .animate-shimmer {
+    background: linear-gradient(90deg, #F0E6D2 0%, #E8D5A3 50%, #F0E6D2 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2.5s linear infinite;
+  }
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  .glass {
+    background: rgba(250, 248, 245, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+  }
+  .glass-dark {
+    background: rgba(42, 20, 24, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+  }
+  /* Decorative gold ring (logo-inspired) */
+  .ring-gold-double {
+    box-shadow:
+      inset 0 0 0 2px #D4AF37,
+      inset 0 0 0 4px #FAF8F5,
+      inset 0 0 0 5px #B8943D;
+  }
+}
