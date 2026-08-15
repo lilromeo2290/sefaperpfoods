@@ -170,7 +170,7 @@ export function SupportWidget() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Type your message..."
-              className="bg-cream border-gold/30 text-brown-dark placeholder:text-brown/40"
+              className="bg-cream border-gold/30 text-brown-dark placeholder:text-brown-dark"
             />
             <Button type="submit" size="icon" className="gradient-gold text-brown-dark hover:opacity-90 shrink-0">
               <Send className="h-4 w-4" />

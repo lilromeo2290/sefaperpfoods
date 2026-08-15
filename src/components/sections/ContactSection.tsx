@@ -36,13 +36,13 @@ export function ContactSection() {
               <div className="h-12 w-12 rounded-xl gradient-gold flex items-center justify-center mx-auto mb-3 shadow-gold">
                 <c.icon className="h-6 w-6 text-brown-dark" />
               </div>
-              <p className="text-xs text-brown/60 uppercase tracking-wider">{c.label}</p>
+              <p className="text-xs text-brown-dark uppercase tracking-wider">{c.label}</p>
               {c.href ? (
                 <a href={c.href} className="block font-display text-lg font-bold text-brown-dark hover:text-gold mt-1">{c.value}</a>
               ) : (
                 <p className="font-display text-lg font-bold text-brown-dark mt-1">{c.value}</p>
               )}
-              <p className="text-xs text-brown/60 mt-1">{c.sub}</p>
+              <p className="text-xs text-brown-dark mt-1">{c.sub}</p>
             </Card>
           ))}
         </div>
@@ -59,7 +59,7 @@ export function ContactSection() {
           {/* Form */}
           <Card className="p-6 border-gold/15">
             <h2 className="font-display text-2xl font-bold text-brown-dark mb-1">Send us a message</h2>
-            <p className="text-sm text-brown/60 mb-4">We'll get back to you within 24 hours.</p>
+            <p className="text-sm text-brown-dark mb-4">We'll get back to you within 24 hours.</p>
             <form
               className="space-y-3"
               onSubmit={(e) => { e.preventDefault(); toast.success('Message sent! We will respond within 24 hours.'); (e.target as HTMLFormElement).reset(); }}
@@ -74,7 +74,7 @@ export function ContactSection() {
                 required
                 placeholder="Your message..."
                 rows={5}
-                className="w-full px-3 py-2 rounded-lg border border-gold/30 bg-cream text-brown-dark placeholder:text-brown/40 text-sm resize-none"
+                className="w-full px-3 py-2 rounded-lg border border-gold/30 bg-cream text-brown-dark placeholder:text-brown-dark text-sm resize-none"
               />
               <Button type="submit" className="w-full gradient-gold text-brown-dark hover:opacity-90 font-semibold h-11">
                 <Send className="h-4 w-4 mr-2" /> Send Message
@@ -91,7 +91,7 @@ export function ContactSection() {
                   <MessageCircle className="h-5 w-5 mr-3 text-gold" />
                   <div className="text-left">
                     <p className="font-semibold">Live Chat (AI Assistant)</p>
-                    <p className="text-xs text-brown/60">Instant answers, 24/7</p>
+                    <p className="text-xs text-brown-dark">Instant answers, 24/7</p>
                   </div>
                 </Button>
                 <a href="https://wa.me/233553878748" target="_blank" rel="noopener noreferrer">
@@ -101,7 +101,7 @@ export function ContactSection() {
                     </svg>
                     <div className="text-left">
                       <p className="font-semibold">WhatsApp</p>
-                      <p className="text-xs text-brown/60">+233 553 878 748</p>
+                      <p className="text-xs text-brown-dark">+233 553 878 748</p>
                     </div>
                   </Button>
                 </a>
@@ -110,7 +110,7 @@ export function ContactSection() {
                     <Facebook className="h-5 w-5 mr-3 text-[#1877F2]" />
                     <div className="text-left">
                       <p className="font-semibold">Facebook Messenger</p>
-                      <p className="text-xs text-brown/60">@sbffoods</p>
+                      <p className="text-xs text-brown-dark">@sbffoods</p>
                     </div>
                   </Button>
                 </a>
@@ -129,7 +129,7 @@ export function ContactSection() {
                   { day: 'Public Holidays', hours: 'By appointment' },
                 ].map((h) => (
                   <div key={h.day} className="flex justify-between">
-                    <span className="text-brown/70">{h.day}</span>
+                    <span className="text-brown-dark">{h.day}</span>
                     <span className="font-medium text-brown-dark">{h.hours}</span>
                   </div>
                 ))}

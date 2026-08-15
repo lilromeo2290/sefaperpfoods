@@ -140,7 +140,7 @@ export function CheckoutSection() {
   if (cart.length === 0 && stage !== 'success') {
     return (
       <div className="container mx-auto px-4 py-20 min-h-[60vh] flex flex-col items-center justify-center text-center gap-4">
-        <ShoppingBag className="h-12 w-12 text-brown/30" />
+        <ShoppingBag className="h-12 w-12 text-brown-dark" />
         <h1 className="font-display text-2xl font-bold text-brown-dark">Your cart is empty</h1>
         <Button className="gradient-gold text-brown-dark hover:opacity-90 font-semibold" onClick={() => setView('products')}>
           Browse products
@@ -161,8 +161,8 @@ export function CheckoutSection() {
             <Loader2 className="h-10 w-10 text-brown-dark animate-spin" />
           </div>
           <h2 className="font-display text-2xl font-bold text-brown-dark">Processing your order</h2>
-          <p className="text-brown/70 mt-2 text-sm">{processingMsg}</p>
-          <p className="text-xs text-brown/50 mt-4">Please do not close this window.</p>
+          <p className="text-brown-dark mt-2 text-sm">{processingMsg}</p>
+          <p className="text-xs text-brown-dark mt-4">Please do not close this window.</p>
         </div>
       </div>
     );
@@ -241,7 +241,7 @@ export function CheckoutSection() {
                   </div>
                   <div className="flex-1">
                     <p className="font-semibold text-brown-dark text-sm">GPS Location (Required)</p>
-                    <p className="text-xs text-brown/60 mt-0.5">
+                    <p className="text-xs text-brown-dark mt-0.5">
                       We use your GPS coordinates to assign the nearest dispatch rider and verify delivery coverage.
                     </p>
                     {form.lat && form.lng ? (
@@ -284,10 +284,10 @@ export function CheckoutSection() {
                           <MapPin className="h-6 w-6 text-brand-red fill-brand-red" />
                         </div>
                         <p className="text-xs text-brown-dark mt-1 font-medium">Your delivery location</p>
-                        <p className="text-[10px] text-brown/60">Distance from dispatch: ~12.4 km</p>
+                        <p className="text-[10px] text-brown-dark">Distance from dispatch: ~12.4 km</p>
                       </div>
                     ) : (
-                      <p className="text-xs text-brown/50">Map preview will appear here after GPS capture</p>
+                      <p className="text-xs text-brown-dark">Map preview will appear here after GPS capture</p>
                     )}
                   </div>
                   {/* Mock map grid */}
@@ -332,13 +332,13 @@ export function CheckoutSection() {
                       <p.icon className="h-4 w-4 text-brown shrink-0" />
                       <p className="text-sm font-semibold text-brown-dark truncate">{p.label}</p>
                     </div>
-                    <p className="text-[11px] text-brown/60">{p.sub}</p>
+                    <p className="text-[11px] text-brown-dark">{p.sub}</p>
                   </div>
-                  <Badge variant="outline" className="text-[9px] border-gold/30 text-brown/60 shrink-0">{p.badge}</Badge>
+                  <Badge variant="outline" className="text-[9px] border-gold/30 text-brown-dark shrink-0">{p.badge}</Badge>
                 </label>
               ))}
             </RadioGroup>
-            <div className="mt-3 flex items-start gap-2 text-xs text-brown/70 bg-brand-green/5 border border-brand-green/20 rounded-lg p-3">
+            <div className="mt-3 flex items-start gap-2 text-xs text-brown-dark bg-brand-green/5 border border-brand-green/20 rounded-lg p-3">
               <ShieldCheck className="h-4 w-4 text-brand-green shrink-0 mt-0.5" />
               <p>All payments are processed over 256-bit SSL encryption. We never store your card details. Mobile Money payments require you to approve the prompt on your phone.</p>
             </div>
@@ -359,7 +359,7 @@ export function CheckoutSection() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="font-medium text-brown-dark truncate">{item.name}</p>
-                    <p className="text-[11px] text-brown/60">{item.size} × {item.quantity}</p>
+                    <p className="text-[11px] text-brown-dark">{item.size} × {item.quantity}</p>
                   </div>
                   <p className="font-semibold text-brown-dark">GHS {(item.unitPrice * item.quantity).toFixed(2)}</p>
                 </div>
@@ -369,11 +369,11 @@ export function CheckoutSection() {
             <Separator className="bg-gold/20 my-3" />
 
             <div className="space-y-1.5 text-sm">
-              <div className="flex justify-between text-brown/70"><span>Subtotal</span><span>GHS {total.subtotal.toFixed(2)}</span></div>
+              <div className="flex justify-between text-brown-dark"><span>Subtotal</span><span>GHS {total.subtotal.toFixed(2)}</span></div>
               {total.discount > 0 && (
                 <div className="flex justify-between text-brand-green"><span>Discount {coupon ? `(${coupon.code})` : ''}</span><span>-GHS {total.discount.toFixed(2)}</span></div>
               )}
-              <div className="flex justify-between text-brown/70"><span>Delivery</span><span>GHS {total.deliveryFee.toFixed(2)}</span></div>
+              <div className="flex justify-between text-brown-dark"><span>Delivery</span><span>GHS {total.deliveryFee.toFixed(2)}</span></div>
               <Separator className="bg-gold/20 my-1.5" />
               <div className="flex justify-between font-bold text-lg text-brown-dark"><span>Total</span><span>GHS {total.total.toFixed(2)}</span></div>
             </div>
@@ -382,7 +382,7 @@ export function CheckoutSection() {
               <ShieldCheck className="h-4 w-4 mr-2" /> Place Order — GHS {total.total.toFixed(2)}
             </Button>
 
-            <div className="mt-3 space-y-1.5 text-xs text-brown/60">
+            <div className="mt-3 space-y-1.5 text-xs text-brown-dark">
               <p className="flex items-center gap-1.5"><Truck className="h-3 w-3 text-gold" /> 24-72h delivery nationwide</p>
               <p className="flex items-center gap-1.5"><Receipt className="h-3 w-3 text-gold" /> Instant SMS & WhatsApp receipt</p>
               <p className="flex items-center gap-1.5"><ShieldCheck className="h-3 w-3 text-gold" /> 48h money-back guarantee</p>
@@ -423,12 +423,12 @@ function OrderSuccess({ orderRef, paymentLabel }: { orderRef: string | null; pay
             <CheckCircle2 className="h-12 w-12 text-brand-green" />
           </div>
           <h1 className="font-display text-3xl font-bold text-brown-dark">Order Confirmed!</h1>
-          <p className="text-brown/70 mt-2">
+          <p className="text-brown-dark mt-2">
             Thank you for your order. We have received your payment via <strong>{paymentLabel}</strong> and our team is preparing your package now.
           </p>
 
           <div className="mt-6 p-4 rounded-xl bg-cream border border-gold/20">
-            <p className="text-xs text-brown/60 uppercase tracking-wider">Your Order Reference</p>
+            <p className="text-xs text-brown-dark uppercase tracking-wider">Your Order Reference</p>
             <div className="flex items-center justify-center gap-2 mt-1">
               <p className="font-display text-2xl font-bold text-brown-dark">{orderRef}</p>
               <button
@@ -439,7 +439,7 @@ function OrderSuccess({ orderRef, paymentLabel }: { orderRef: string | null; pay
                 <Copy className="h-4 w-4" />
               </button>
             </div>
-            <p className="text-xs text-brown/60 mt-2">
+            <p className="text-xs text-brown-dark mt-2">
               Save this reference to track your order. We have also sent it via SMS and WhatsApp.
             </p>
           </div>
@@ -453,7 +453,7 @@ function OrderSuccess({ orderRef, paymentLabel }: { orderRef: string | null; pay
               <div key={s.label} className="p-3 rounded-lg bg-cream/50">
                 <s.icon className="h-5 w-5 text-gold mx-auto mb-1" />
                 <p className="font-semibold text-brown-dark">{s.label}</p>
-                <p className="text-[10px] text-brown/60">{s.sub}</p>
+                <p className="text-[10px] text-brown-dark">{s.sub}</p>
               </div>
             ))}
           </div>

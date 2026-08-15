@@ -82,7 +82,7 @@ export function Header() {
                     'relative px-4 py-2 text-sm font-medium rounded-lg transition-colors',
                     view === item.view
                       ? 'text-burgundy bg-cream shadow-sm'
-                      : 'text-burgundy/80 hover:text-burgundy hover:bg-cream/60'
+                      : 'text-burgundy hover:text-burgundy hover:bg-cream/60'
                   )}
                 >
                   {item.label}

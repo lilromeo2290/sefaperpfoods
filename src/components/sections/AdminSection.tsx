@@ -41,7 +41,7 @@ export function AdminSection() {
               <LayoutDashboard className="h-8 w-8 text-gold" />
             </div>
             <h1 className="font-display text-2xl font-bold text-brown-dark">Staff Portal</h1>
-            <p className="text-brown/60 text-sm mt-1">Sign in to access the admin dashboard.</p>
+            <p className="text-brown-dark text-sm mt-1">Sign in to access the admin dashboard.</p>
           </div>
           <form onSubmit={(e) => { e.preventDefault(); login('admin@sbffoods.com', 'ADMIN'); toast.success('Welcome back, Admin'); }} className="space-y-3">
             <Input type="email" placeholder="admin@sbffoods.com" defaultValue="admin@sbffoods.com" className="bg-cream border-gold/30 text-brown-dark" />
@@ -50,7 +50,7 @@ export function AdminSection() {
               Sign In as Admin
             </Button>
           </form>
-          <p className="text-xs text-brown/50 mt-4 text-center">Demo credentials are pre-filled. Click Sign In to explore.</p>
+          <p className="text-xs text-brown-dark mt-4 text-center">Demo credentials are pre-filled. Click Sign In to explore.</p>
         </Card>
       </div>
     );
@@ -59,7 +59,7 @@ export function AdminSection() {
   if (!stats) {
     return (
       <div className="min-h-screen py-20 text-center">
-        <p className="text-brown/60">Loading dashboard...</p>
+        <p className="text-brown-dark">Loading dashboard...</p>
       </div>
     );
   }
@@ -127,7 +127,7 @@ export function AdminSection() {
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <h3 className="font-display font-bold text-brown-dark">Sales — last 7 days</h3>
-                    <p className="text-xs text-brown/60">Revenue & order count by day</p>
+                    <p className="text-xs text-brown-dark">Revenue & order count by day</p>
                   </div>
                   <Badge className="bg-brand-green/10 text-brand-green border border-brand-green/30">
                     <TrendingUp className="h-3 w-3 mr-1" /> +12.4% vs last week
@@ -156,7 +156,7 @@ export function AdminSection() {
               {/* Status breakdown */}
               <Card className="p-5 border-gold/15">
                 <h3 className="font-display font-bold text-brown-dark mb-2">Order Status</h3>
-                <p className="text-xs text-brown/60 mb-4">Current pipeline distribution</p>
+                <p className="text-xs text-brown-dark mb-4">Current pipeline distribution</p>
                 <ResponsiveContainer width="100%" height={200}>
                   <PieChart>
                     <Pie
@@ -173,7 +173,7 @@ export function AdminSection() {
                 <div className="space-y-1 mt-2">
                   {Object.entries(stats.statusCounts).map(([k, v]: any, i) => (
                     <div key={k} className="flex items-center justify-between text-xs">
-                      <span className="flex items-center gap-1.5 text-brown/70">
+                      <span className="flex items-center gap-1.5 text-brown-dark">
                         <span className="h-2 w-2 rounded-full" style={{ background: COLORS[i % COLORS.length] }} /> {k.replace('_', ' ')}
                       </span>
                       <span className="font-semibold text-brown-dark">{v}</span>
@@ -226,7 +226,7 @@ export function AdminSection() {
                     <div key={o.orderRef} className="flex items-center justify-between gap-2 p-2 rounded-lg hover:bg-cream/50">
                       <div>
                         <p className="text-sm font-semibold text-brown-dark">{o.orderRef}</p>
-                        <p className="text-xs text-brown/60">{o.customerName} • {o.region}</p>
+                        <p className="text-xs text-brown-dark">{o.customerName} • {o.region}</p>
                       </div>
                       <div className="text-right">
                         <p className="text-sm font-bold text-brown-dark">GHS {o.total.toFixed(2)}</p>
@@ -245,7 +245,7 @@ export function AdminSection() {
                 </h3>
                 <div className="space-y-2">
                   {stats.lowStock.length === 0 ? (
-                    <p className="text-xs text-brown/60">All products are well stocked.</p>
+                    <p className="text-xs text-brown-dark">All products are well stocked.</p>
                   ) : (
                     stats.lowStock.map((p: any) => (
                       <div key={p.id} className="flex items-center justify-between text-xs">
@@ -270,7 +270,7 @@ export function AdminSection() {
                   <Input placeholder="Search orders..." className="bg-cream border-gold/30 text-brown-dark w-48" />
                   <Select defaultValue="all">
                     <SelectTrigger className="w-40 bg-cream border-gold/30 text-brown-dark">
-                      <Filter className="h-3 w-3 mr-1 text-brown/60" />
+                      <Filter className="h-3 w-3 mr-1 text-brown-dark" />
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
@@ -287,7 +287,7 @@ export function AdminSection() {
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
-                    <tr className="text-left border-b border-gold/20 text-brown/70">
+                    <tr className="text-left border-b border-gold/20 text-brown-dark">
                       <th className="py-2 pr-2 font-medium">Order Ref</th>
                       <th className="py-2 pr-2 font-medium">Customer</th>
                       <th className="py-2 pr-2 font-medium">Region</th>
@@ -302,8 +302,8 @@ export function AdminSection() {
                     {stats.orders.map((o: any) => (
                       <tr key={o.orderRef} className="border-b border-gold/10 hover:bg-cream/30">
                         <td className="py-2 pr-2 font-semibold text-brown-dark">{o.orderRef}</td>
-                        <td className="py-2 pr-2 text-brown/80">{o.customerName}</td>
-                        <td className="py-2 pr-2 text-brown/80">{o.region}</td>
+                        <td className="py-2 pr-2 text-brown-dark">{o.customerName}</td>
+                        <td className="py-2 pr-2 text-brown-dark">{o.region}</td>
                         <td className="py-2 pr-2 font-medium text-brown-dark">GHS {o.total.toFixed(2)}</td>
                         <td className="py-2 pr-2">
                           <Badge variant="outline" className={cn('text-[10px]', o.paymentStatus === 'PAID' ? 'border-brand-green/30 text-brand-green' : 'border-brand-red/30 text-brand-red')}>
@@ -315,7 +315,7 @@ export function AdminSection() {
                             {o.status.replace('_', ' ')}
                           </Badge>
                         </td>
-                        <td className="py-2 pr-2 text-xs text-brown/60">{new Date(o.createdAt).toLocaleDateString()}</td>
+                        <td className="py-2 pr-2 text-xs text-brown-dark">{new Date(o.createdAt).toLocaleDateString()}</td>
                         <td className="py-2">
                           <div className="flex gap-1">
                             <Button size="icon" variant="ghost" className="h-7 w-7 text-brown hover:bg-cream" onClick={() => toast.info(`Viewing ${o.orderRef}`)}>
@@ -349,7 +349,7 @@ export function AdminSection() {
                     <div className="flex items-start justify-between gap-2">
                       <div>
                         <p className="font-semibold text-brown-dark">{p.name}</p>
-                        <p className="text-xs text-brown/60 capitalize">{p.category.replace('-', ' ')}</p>
+                        <p className="text-xs text-brown-dark capitalize">{p.category.replace('-', ' ')}</p>
                       </div>
                       <Badge className={cn(
                         'text-[10px]',
@@ -402,7 +402,7 @@ export function AdminSection() {
                       </div>
                       <div className="w-20 text-right text-xs">
                         <span className={cn('font-semibold', low ? 'text-brand-red' : 'text-brown-dark')}>{p.stockQty}</span>
-                        <span className="text-brown/40"> / {p.reorderLevel}</span>
+                        <span className="text-brown-dark"> / {p.reorderLevel}</span>
                       </div>
                       {low && (
                         <Button size="sm" variant="outline" className="border-brand-red text-brand-red hover:bg-brand-red/5 text-[10px] h-7" onClick={() => toast.info('Reorder placed')}>
@@ -457,7 +457,7 @@ export function AdminSection() {
                     <r.icon className="h-6 w-6 text-brown-dark" />
                   </div>
                   <p className="font-display font-bold text-brown-dark">{r.title}</p>
-                  <p className="text-xs text-brown/60 mt-1">{r.desc}</p>
+                  <p className="text-xs text-brown-dark mt-1">{r.desc}</p>
                   <div className="flex gap-1 mt-3">
                     <Button size="sm" variant="outline" className="border-brown text-brown hover:bg-cream text-xs flex-1" onClick={() => toast.info(`Generating ${r.title} PDF...`)}>
                       <Download className="h-3 w-3 mr-1" /> PDF
@@ -490,7 +490,7 @@ export function AdminSection() {
                       </div>
                       <div>
                         <p className="text-sm font-semibold text-brown-dark">{o.orderRef}</p>
-                        <p className="text-xs text-brown/60">{o.customerName} • {o.region}</p>
+                        <p className="text-xs text-brown-dark">{o.customerName} • {o.region}</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
@@ -529,7 +529,7 @@ function KpiCard({ icon: Icon, label, value, trend, color }: { icon: any; label:
           {Math.abs(trend)}%
         </span>
       </div>
-      <p className="text-xs text-brown/60 mt-2">{label}</p>
+      <p className="text-xs text-brown-dark mt-2">{label}</p>
       <p className="font-display text-xl md:text-2xl font-bold text-brown-dark mt-0.5">{value}</p>
     </Card>
   );

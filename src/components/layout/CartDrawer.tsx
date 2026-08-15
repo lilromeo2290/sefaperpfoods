@@ -44,10 +44,10 @@ export function CartDrawer() {
         {cart.length === 0 ? (
           <div className="flex-1 flex flex-col items-center justify-center p-8 text-center gap-3">
             <div className="h-20 w-20 rounded-full bg-cream-dark flex items-center justify-center">
-              <ShoppingBag className="h-9 w-9 text-brown/40" />
+              <ShoppingBag className="h-9 w-9 text-brown-dark" />
             </div>
             <p className="font-display text-xl font-semibold text-brown-dark">Your cart is empty</p>
-            <p className="text-sm text-brown/60">Discover our authentic Ghanaian products — fresh from Dzodze.</p>
+            <p className="text-sm text-brown-dark">Discover our authentic Ghanaian products — fresh from Dzodze.</p>
             <Button
               className="mt-2 gradient-gold text-brown-dark hover:opacity-90 font-semibold"
               onClick={() => {
@@ -74,7 +74,7 @@ export function CartDrawer() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="font-semibold text-sm text-brown-dark line-clamp-1">{item.name}</p>
-                    <p className="text-xs text-brown/60">{item.size}</p>
+                    <p className="text-xs text-brown-dark">{item.size}</p>
                     <p className="text-sm font-bold text-brown mt-0.5">GHS {item.unitPrice.toFixed(2)}</p>
                     <div className="flex items-center justify-between mt-1.5">
                       <div className="flex items-center gap-1 bg-cream-dark rounded-lg">
@@ -104,7 +104,7 @@ export function CartDrawer() {
                     </div>
                   </div>
                   <div className="text-right shrink-0">
-                    <p className="text-xs text-brown/60">Subtotal</p>
+                    <p className="text-xs text-brown-dark">Subtotal</p>
                     <p className="font-bold text-brown-dark">GHS {(item.unitPrice * item.quantity).toFixed(2)}</p>
                   </div>
                 </div>
@@ -131,7 +131,7 @@ export function CartDrawer() {
                     placeholder="Coupon code (try WELCOME10)"
                     value={couponInput}
                     onChange={(e) => setCouponInput(e.target.value.toUpperCase())}
-                    className="bg-cream border-gold/30 text-brown-dark placeholder:text-brown/40"
+                    className="bg-cream border-gold/30 text-brown-dark placeholder:text-brown-dark"
                   />
                   <Button variant="outline" onClick={handleApply} className="border-brown text-brown hover:bg-cream">
                     Apply
@@ -140,7 +140,7 @@ export function CartDrawer() {
               )}
 
               <div className="space-y-1 text-sm">
-                <div className="flex justify-between text-brown/70">
+                <div className="flex justify-between text-brown-dark">
                   <span>Subtotal</span>
                   <span>GHS {subtotal.toFixed(2)}</span>
                 </div>
@@ -150,7 +150,7 @@ export function CartDrawer() {
                     <span>-GHS {total.discount.toFixed(2)}</span>
                   </div>
                 )}
-                <div className="flex justify-between text-brown/70">
+                <div className="flex justify-between text-brown-dark">
                   <span>Delivery</span>
                   <span>GHS {total.deliveryFee.toFixed(2)}</span>
                 </div>

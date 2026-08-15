@@ -48,7 +48,7 @@ export function PWAInstallPrompt() {
         </div>
         <div className="flex-1 min-w-0">
           <p className="font-semibold text-sm text-brown-dark">Install Sefaperp Foods app</p>
-          <p className="text-xs text-brown/70 mt-0.5">
+          <p className="text-xs text-brown-dark mt-0.5">
             Add to your home screen for offline access, fast ordering, and push notifications.
           </p>
           <div className="flex gap-2 mt-2.5">
@@ -80,7 +80,7 @@ export function PWAInstallPrompt() {
         </div>
         <button
           aria-label="Close"
-          className="text-brown/60 hover:text-brown p-1"
+          className="text-brown-dark hover:text-brown p-1"
           onClick={() => setShow(false)}
         >
           <X className="h-4 w-4" />

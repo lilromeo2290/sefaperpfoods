@@ -81,7 +81,7 @@ export function ProductCard({ p }: { p: ProductCardData }) {
         <div className="flex items-start justify-between gap-2">
           <div className="flex-1 min-w-0">
             <h3 className="font-display font-bold text-brown-dark text-base leading-tight line-clamp-1">{p.name}</h3>
-            <p className="text-xs text-brown/60 mt-0.5 line-clamp-2">{p.tagline}</p>
+            <p className="text-xs text-brown-dark mt-0.5 line-clamp-2">{p.tagline}</p>
           </div>
         </div>
         <div className="flex items-center gap-1 mt-1.5">
@@ -90,11 +90,11 @@ export function ProductCard({ p }: { p: ProductCardData }) {
               <Star key={i} className={cn('h-3 w-3', i <= Math.round(avgRating) ? 'text-gold fill-gold' : 'text-brown/20')} />
             ))}
           </div>
-          <span className="text-[11px] text-brown/60">{avgRating} ({reviewCount})</span>
+          <span className="text-[11px] text-brown-dark">{avgRating} ({reviewCount})</span>
         </div>
         <div className="flex items-end justify-between mt-3">
           <div>
-            <p className="text-[10px] text-brown/50 uppercase tracking-wider">From</p>
+            <p className="text-[10px] text-brown-dark uppercase tracking-wider">From</p>
             <p className="font-bold text-brown-dark text-lg">GHS {p.basePrice}</p>
           </div>
           <Button

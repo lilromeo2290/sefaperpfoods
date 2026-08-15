@@ -100,7 +100,7 @@ export function DistributorSection() {
                     <f.icon className="h-6 w-6 text-brown-dark" />
                   </div>
                   <h3 className="font-display font-bold text-brown-dark text-lg mb-2">{f.title}</h3>
-                  <p className="text-sm text-brown/70">{f.body}</p>
+                  <p className="text-sm text-brown-dark">{f.body}</p>
                 </Card>
               ))}
             </div>
@@ -130,7 +130,7 @@ export function DistributorSection() {
                       </div>
                       <div className="flex-1">
                         <p className="font-display font-bold text-brown-dark">{t.tier}</p>
-                        <p className="text-xs text-brown/60">{t.min}</p>
+                        <p className="text-xs text-brown-dark">{t.min}</p>
                       </div>
                       <Badge className="bg-brand-green/10 text-brand-green border border-brand-green/30">{t.discount}</Badge>
                     </Card>
@@ -146,7 +146,7 @@ export function DistributorSection() {
                       <CheckCircle2 className="h-12 w-12 text-brand-green" />
                     </div>
                     <h3 className="font-display text-2xl font-bold text-brown-dark">Application Received!</h3>
-                    <p className="text-brown/70 mt-2">
+                    <p className="text-brown-dark mt-2">
                       Thank you for applying to become an Sefaperp Foods distributor. Our team will review your application and contact you within 48 hours.
                     </p>
                     <Button className="mt-4 gradient-gold text-brown-dark hover:opacity-90 font-semibold" onClick={() => login(form.email, 'DISTRIBUTOR')}>
@@ -156,7 +156,7 @@ export function DistributorSection() {
                 ) : (
                   <>
                     <h3 className="font-display text-2xl font-bold text-brown-dark mb-1">Apply to become a distributor</h3>
-                    <p className="text-sm text-brown/60 mb-4">Fill in your details — approval within 48 hours.</p>
+                    <p className="text-sm text-brown-dark mb-4">Fill in your details — approval within 48 hours.</p>
                     <form onSubmit={submit} className="space-y-3">
                       <Field label="Business Name" required>
                         <Input required value={form.businessName} onChange={(e) => set('businessName', e.target.value)} placeholder="e.g. Volta Foods Ltd" className="bg-cream border-gold/30 text-brown-dark" />
@@ -193,7 +193,7 @@ export function DistributorSection() {
                       <Button type="submit" className="w-full gradient-gold text-brown-dark hover:opacity-90 font-semibold h-12">
                         Submit Application
                       </Button>
-                      <p className="text-xs text-brown/50 text-center">By applying, you agree to our distributor terms and code of conduct.</p>
+                      <p className="text-xs text-brown-dark text-center">By applying, you agree to our distributor terms and code of conduct.</p>
                     </form>
                   </>
                 )}
@@ -274,7 +274,7 @@ function DistributorDashboard() {
               <div className="h-3 rounded-full bg-cream-dark overflow-hidden">
                 <div className="h-full gradient-gold" style={{ width: '72%' }} />
               </div>
-              <p className="text-xs text-brown/60 mt-2">
+              <p className="text-xs text-brown-dark mt-2">
                 Order 50 more units this month to unlock Silver tier (15% off all bulk orders).
               </p>
             </Card>
@@ -297,7 +297,7 @@ function DistributorDashboard() {
                   <div key={o.ref} className="flex items-center justify-between p-3 rounded-lg bg-cream/50">
                     <div>
                       <p className="font-semibold text-brown-dark text-sm">{o.ref}</p>
-                      <p className="text-xs text-brown/60">{o.date} • {o.items}</p>
+                      <p className="text-xs text-brown-dark">{o.date} • {o.items}</p>
                     </div>
                     <div className="flex items-center gap-3">
                       <p className="font-bold text-brown-dark">GHS {o.total}</p>
@@ -320,7 +320,7 @@ function DistributorDashboard() {
                   <Card key={m} className="p-4 border-gold/15">
                     <FileText className="h-8 w-8 text-gold mb-2" />
                     <p className="font-semibold text-brown-dark">Statement — {m}</p>
-                    <p className="text-xs text-brown/60">3 orders • GHS 4,510 total</p>
+                    <p className="text-xs text-brown-dark">3 orders • GHS 4,510 total</p>
                     <Button size="sm" variant="outline" className="border-brown text-brown hover:bg-cream mt-2 w-full text-xs" onClick={() => toast.info(`Downloading ${m} statement`)}>
                       <Download className="h-3 w-3 mr-1" /> Download PDF
                     </Button>
@@ -347,11 +347,11 @@ function DistributorDashboard() {
                     <div className="flex items-start justify-between">
                       <div>
                         <p className="font-semibold text-brown-dark">{b.name}</p>
-                        <p className="text-xs text-brown/60 flex items-center gap-1 mt-1"><Store className="h-3 w-3" /> {b.city}</p>
+                        <p className="text-xs text-brown-dark flex items-center gap-1 mt-1"><Store className="h-3 w-3" /> {b.city}</p>
                       </div>
                       <Badge className="bg-brand-green/10 text-brand-green border border-brand-green/30">Active</Badge>
                     </div>
-                    <p className="text-xs text-brown/60 mt-2">This month's sales</p>
+                    <p className="text-xs text-brown-dark mt-2">This month's sales</p>
                     <p className="font-display font-bold text-brown-dark">GHS {b.sales}</p>
                   </Card>
                 ))}
@@ -374,7 +374,7 @@ function DistributorDashboard() {
                       </div>
                       <div>
                         <p className="font-semibold text-brown-dark text-sm">{d.ref}</p>
-                        <p className="text-xs text-brown/60">Driver: {d.driver} • ETA: {d.eta}</p>
+                        <p className="text-xs text-brown-dark">Driver: {d.driver} • ETA: {d.eta}</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
@@ -414,7 +414,7 @@ function DistStat({ icon: Icon, label, value, trend }: { icon: any; label: strin
         </div>
         <Badge variant="outline" className="border-brand-green/30 text-brand-green text-[10px]">{trend}</Badge>
       </div>
-      <p className="text-xs text-brown/60 mt-2">{label}</p>
+      <p className="text-xs text-brown-dark mt-2">{label}</p>
       <p className="font-display text-xl font-bold text-brown-dark">{value}</p>
     </Card>
   );

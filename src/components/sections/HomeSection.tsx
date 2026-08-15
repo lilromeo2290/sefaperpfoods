@@ -52,7 +52,7 @@ export function HomeSection() {
                 Quality, Taste & Trust,
                 <span className="block text-gold-dark mt-2">Delivered Fresh.</span>
               </h1>
-              <p className="text-base md:text-lg text-burgundy max-w-xl mx-auto lg:mx-0 text-pretty">
+              <p className="text-base md:text-lg text-brown-dark max-w-xl mx-auto lg:mx-0 text-pretty font-medium">
                 Premium Shitor, Tom Brown Powder and traditional Ghanaian foods — slow-roasted in small batches in Dzodze and delivered to your door across Ghana. Pay with Mobile Money or card. Track every step.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
@@ -80,7 +80,7 @@ export function HomeSection() {
                   <Users className="h-5 w-5 mr-2" /> Become a Distributor
                 </Button>
               </div>
-              <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center lg:justify-start pt-2 text-xs text-burgundy/70">
+              <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center lg:justify-start pt-2 text-xs text-burgundy">
                 <span className="flex items-center gap-1.5"><Shield className="h-3.5 w-3.5 text-brand-green" /> FDA-approved facility</span>
                 <span className="flex items-center gap-1.5"><Leaf className="h-3.5 w-3.5 text-brand-green" /> No preservatives</span>
                 <span className="flex items-center gap-1.5"><Truck className="h-3.5 w-3.5 text-gold" /> Nationwide delivery</span>
@@ -136,7 +136,7 @@ export function HomeSection() {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-brown-dark">FDA Approved</p>
-                  <p className="text-[10px] text-brown-dark/75">Food Safety Certified</p>
+                  <p className="text-[10px] text-brown-dark">Food Safety Certified</p>
                 </div>
               </Card>
               {/* floating badge: Made in Ghana */}
@@ -146,7 +146,7 @@ export function HomeSection() {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-brown-dark">Made in Ghana</p>
-                  <p className="text-[10px] text-brown-dark/75">Crafted in Dzodze, Volta Region</p>
+                  <p className="text-[10px] text-brown-dark">Crafted in Dzodze, Volta Region</p>
                 </div>
               </Card>
             </div>
@@ -190,7 +190,7 @@ export function HomeSection() {
               </div>
               <div>
                 <p className="text-sm font-semibold text-brown-dark">{f.label}</p>
-                <p className="text-[11px] text-brown-dark/75">{f.sub}</p>
+                <p className="text-[11px] text-brown-dark">{f.sub}</p>
               </div>
             </div>
           ))}
@@ -238,7 +238,7 @@ export function HomeSection() {
               <h2 className="font-display text-3xl md:text-4xl font-bold text-brown-dark mt-2">
                 Our signature products
               </h2>
-              <p className="text-brown-dark/85 mt-2 max-w-xl">
+              <p className="text-brown-dark mt-2 max-w-xl">
                 Slow-crafted Ghanaian classics — from our kitchen in Dzodze to your table anywhere in Ghana.
               </p>
             </div>
@@ -262,7 +262,7 @@ export function HomeSection() {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-brown-dark mt-2">
               Six reasons families choose us
             </h2>
-            <p className="text-brown-dark/85 mt-3">
+            <p className="text-brown-dark mt-3">
               We obsess over quality at every step — from sourcing sun-dried peppers to last-mile delivery.
             </p>
           </div>
@@ -298,7 +298,7 @@ export function HomeSection() {
                     </div>
                   )}
                   <h3 className="font-display font-bold text-brown-dark text-lg mb-2">{f.title}</h3>
-                  <p className="text-sm text-brown-dark/85 leading-relaxed">{f.body}</p>
+                  <p className="text-sm text-brown-dark leading-relaxed">{f.body}</p>
                 </div>
               </Card>
             ))}
@@ -398,9 +398,9 @@ export function HomeSection() {
                 </div>
                 <div className="p-5">
                   <h3 className="font-display font-bold text-brown-dark text-lg leading-tight">{n.title}</h3>
-                  <p className={`text-sm text-brown-dark/85 mt-2 ${(n.featured || n.showFull) ? '' : 'line-clamp-3'}`}>{n.excerpt}</p>
+                  <p className={`text-sm text-brown-dark mt-2 ${(n.featured || n.showFull) ? '' : 'line-clamp-3'}`}>{n.excerpt}</p>
                   {n.excerpt2 && (
-                    <p className="text-sm text-brown-dark/85 mt-3">{n.excerpt2}</p>
+                    <p className="text-sm text-brown-dark mt-3">{n.excerpt2}</p>
                   )}
                 </div>
               </Card>
@@ -421,7 +421,7 @@ function DeliveryCity({ city, eta, highlight }: { city: string; eta: string; hig
       <span className="flex items-center gap-2 text-sm font-medium text-brown-dark">
         <MapPin className="h-3.5 w-3.5 text-gold" /> {city}
       </span>
-      <span className="text-xs text-brown-dark/75">{eta}</span>
+      <span className="text-xs text-brown-dark">{eta}</span>
     </div>
   );
 }
@@ -437,25 +437,25 @@ export function ContactStrip() {
               <h2 className="font-display text-3xl md:text-4xl font-bold text-gold mt-3">
                 We'd love to hear from you
               </h2>
-              <p className="text-cream/80 mt-3">
+              <p className="text-cream/95 mt-3">
                 Questions about products, bulk orders, distributorship, or delivery? Our team is available Mon-Sat, 8am-7pm.
               </p>
               <div className="space-y-3 mt-6">
-                <a href="tel:+233247968973" className="flex items-center gap-3 text-cream hover:text-gold transition-colors">
+                <a href="tel:+233247968973" className="flex items-center gap-3 text-white hover:text-gold transition-colors">
                   <div className="h-10 w-10 rounded-lg bg-cream/10 flex items-center justify-center"><Phone className="h-5 w-5 text-gold" /></div>
-                  <div><p className="text-xs text-cream/60">Call us</p><p className="font-semibold">+233 247 968 973</p></div>
+                  <div><p className="text-xs text-cream/90">Call us</p><p className="font-bold text-white">+233 247 968 973</p></div>
                 </a>
-                <a href="https://wa.me/233553878748" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-cream hover:text-gold transition-colors">
+                <a href="https://wa.me/233553878748" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white hover:text-gold transition-colors">
                   <div className="h-10 w-10 rounded-lg bg-cream/10 flex items-center justify-center"><Phone className="h-5 w-5 text-gold" /></div>
-                  <div><p className="text-xs text-cream/60">WhatsApp / Alt line</p><p className="font-semibold">+233 553 878 748</p></div>
+                  <div><p className="text-xs text-cream/90">WhatsApp / Alt line</p><p className="font-bold text-white">+233 553 878 748</p></div>
                 </a>
-                <a href="mailto:hello@sbffoods.com" className="flex items-center gap-3 text-cream hover:text-gold transition-colors">
+                <a href="mailto:hello@sbffoods.com" className="flex items-center gap-3 text-white hover:text-gold transition-colors">
                   <div className="h-10 w-10 rounded-lg bg-cream/10 flex items-center justify-center"><Mail className="h-5 w-5 text-gold" /></div>
-                  <div><p className="text-xs text-cream/60">Email us</p><p className="font-semibold">hello@sbffoods.com</p></div>
+                  <div><p className="text-xs text-cream/90">Email us</p><p className="font-bold text-white">hello@sbffoods.com</p></div>
                 </a>
-                <div className="flex items-center gap-3 text-cream">
+                <div className="flex items-center gap-3 text-white">
                   <div className="h-10 w-10 rounded-lg bg-cream/10 flex items-center justify-center"><MapPin className="h-5 w-5 text-gold" /></div>
-                  <div><p className="text-xs text-cream/60">Visit us</p><p className="font-semibold">Dzodze, Ketu North • Volta Region</p></div>
+                  <div><p className="text-xs text-cream/90">Visit us</p><p className="font-bold text-white">Dzodze, Ketu North • Volta Region</p></div>
                 </div>
               </div>
             </div>
@@ -466,11 +466,11 @@ export function ContactStrip() {
                 onSubmit={(e) => { e.preventDefault(); alert('Thank you! We will get back to you within 24 hours.'); (e.target as HTMLFormElement).reset(); }}
               >
                 <div className="grid grid-cols-2 gap-3">
-                  <input required placeholder="Full name" className="px-3 py-2 rounded-lg border border-gold/30 bg-white text-brown-dark placeholder:text-brown/40 text-sm" />
-                  <input required type="tel" placeholder="Phone" className="px-3 py-2 rounded-lg border border-gold/30 bg-white text-brown-dark placeholder:text-brown/40 text-sm" />
+                  <input required placeholder="Full name" className="px-3 py-2 rounded-lg border border-gold/30 bg-white text-brown-dark placeholder:text-brown-dark text-sm" />
+                  <input required type="tel" placeholder="Phone" className="px-3 py-2 rounded-lg border border-gold/30 bg-white text-brown-dark placeholder:text-brown-dark text-sm" />
                 </div>
-                <input required type="email" placeholder="Email" className="w-full px-3 py-2 rounded-lg border border-gold/30 bg-white text-brown-dark placeholder:text-brown/40 text-sm" />
-                <textarea required placeholder="Your message" rows={4} className="w-full px-3 py-2 rounded-lg border border-gold/30 bg-white text-brown-dark placeholder:text-brown/40 text-sm resize-none" />
+                <input required type="email" placeholder="Email" className="w-full px-3 py-2 rounded-lg border border-gold/30 bg-white text-brown-dark placeholder:text-brown-dark text-sm" />
+                <textarea required placeholder="Your message" rows={4} className="w-full px-3 py-2 rounded-lg border border-gold/30 bg-white text-brown-dark placeholder:text-brown-dark text-sm resize-none" />
                 <Button type="submit" className="w-full gradient-gold text-brown-dark hover:opacity-90 font-semibold">
                   Send Message
                 </Button>

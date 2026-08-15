@@ -110,7 +110,7 @@ export function ProductDetailSection() {
     <div className="min-h-screen pb-16">
       {/* Breadcrumb */}
       <div className="bg-cream border-b border-gold/15">
-        <div className="container mx-auto px-4 md:px-6 py-3 flex items-center gap-1 text-xs text-brown/70">
+        <div className="container mx-auto px-4 md:px-6 py-3 flex items-center gap-1 text-xs text-brown-dark">
           <button onClick={() => setView('home')} className="hover:text-brown-dark">Home</button>
           <ChevronRight className="h-3 w-3" />
           <button onClick={() => setView('products')} className="hover:text-brown-dark">Shop</button>
@@ -159,7 +159,7 @@ export function ProductDetailSection() {
 
             <div>
               <h1 className="font-display text-3xl md:text-4xl font-bold text-brown-dark text-balance">{p.name}</h1>
-              <p className="text-brown/70 mt-2">{p.tagline}</p>
+              <p className="text-brown-dark mt-2">{p.tagline}</p>
             </div>
 
             <div className="flex items-center gap-3">
@@ -169,10 +169,10 @@ export function ProductDetailSection() {
                 ))}
               </div>
               <span className="text-sm font-semibold text-brown-dark">{avgRating}</span>
-              <span className="text-sm text-brown/60">({p.reviews.length} reviews)</span>
+              <span className="text-sm text-brown-dark">({p.reviews.length} reviews)</span>
             </div>
 
-            <p className="text-brown/80 leading-relaxed">{p.description.split('\n')[0]}</p>
+            <p className="text-brown-dark leading-relaxed">{p.description.split('\n')[0]}</p>
 
             {/* Size selector */}
             <div>
@@ -252,7 +252,7 @@ export function ProductDetailSection() {
               ].map((f) => (
                 <div key={f.label} className="flex flex-col items-center text-center gap-1 p-2">
                   <f.icon className="h-5 w-5 text-gold" />
-                  <span className="text-[11px] text-brown/70 font-medium">{f.label}</span>
+                  <span className="text-[11px] text-brown-dark font-medium">{f.label}</span>
                 </div>
               ))}
             </div>
@@ -274,7 +274,7 @@ export function ProductDetailSection() {
               <Card className="p-6 border-gold/15">
                 <div className="prose prose-brown max-w-none">
                   {p.description.split('\n').map((para, i) => (
-                    <p key={i} className="text-brown/80 leading-relaxed mb-3">{para}</p>
+                    <p key={i} className="text-brown-dark leading-relaxed mb-3">{para}</p>
                   ))}
                 </div>
                 <div className="grid sm:grid-cols-3 gap-3 mt-6 pt-6 border-t border-gold/15">
@@ -288,8 +288,8 @@ export function ProductDetailSection() {
             <TabsContent value="ingredients" className="mt-6">
               <Card className="p-6 border-gold/15">
                 <h3 className="font-display text-xl font-bold text-brown-dark mb-3">Ingredients</h3>
-                <p className="text-brown/80 leading-relaxed">{p.ingredients}</p>
-                <div className="mt-4 p-3 rounded-lg bg-brand-red/5 border border-brand-red/20 text-sm text-brown/80">
+                <p className="text-brown-dark leading-relaxed">{p.ingredients}</p>
+                <div className="mt-4 p-3 rounded-lg bg-brand-red/5 border border-brand-red/20 text-sm text-brown-dark">
                   <strong className="text-brand-red">Allergen note:</strong> Contains fish (anchovies), crustaceans (shrimp) and peanuts (Tom Brown). Produced in a facility that handles nuts, soy and dairy.
                 </div>
               </Card>
@@ -298,13 +298,13 @@ export function ProductDetailSection() {
             <TabsContent value="nutrition" className="mt-6">
               <Card className="p-6 border-gold/15 max-w-2xl">
                 <h3 className="font-display text-xl font-bold text-brown-dark mb-1">Nutrition Facts</h3>
-                <p className="text-xs text-brown/60 mb-4">{p.nutrition.servingSize} • {p.nutrition.servingsPerContainer}</p>
+                <p className="text-xs text-brown-dark mb-4">{p.nutrition.servingSize} • {p.nutrition.servingsPerContainer}</p>
                 <table className="w-full text-sm">
                   <tbody>
                     {p.nutrition.rows.map(([k, v], i) => (
                       <tr key={i} className={cn(i % 2 === 0 ? 'bg-cream/50' : '', 'border-b border-gold/10')}>
                         <td className="py-2 px-3 font-medium text-brown-dark">{k}</td>
-                        <td className="py-2 px-3 text-right text-brown/80">{v}</td>
+                        <td className="py-2 px-3 text-right text-brown-dark">{v}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -323,7 +323,7 @@ export function ProductDetailSection() {
                         <Star key={i} className={cn('h-5 w-5', i <= Math.round(Number(avgRating)) ? 'text-gold fill-gold' : 'text-brown/20')} />
                       ))}
                     </div>
-                    <p className="text-sm text-brown/60 mt-2">{p.reviews.length} verified reviews</p>
+                    <p className="text-sm text-brown-dark mt-2">{p.reviews.length} verified reviews</p>
                   </div>
                   <Button
                     className="w-full mt-4 gradient-gold text-brown-dark hover:opacity-90 font-semibold"
@@ -337,7 +337,7 @@ export function ProductDetailSection() {
                 <div className="md:col-span-2 space-y-3">
                   {p.reviews.length === 0 ? (
                     <Card className="p-6 text-center border-gold/15">
-                      <p className="text-brown/60">No reviews yet — be the first to share your experience!</p>
+                      <p className="text-brown-dark">No reviews yet — be the first to share your experience!</p>
                     </Card>
                   ) : (
                     p.reviews.map((r) => (
@@ -349,7 +349,7 @@ export function ProductDetailSection() {
                           <div className="flex-1">
                             <div className="flex items-center justify-between">
                               <p className="font-semibold text-brown-dark">{r.authorName}</p>
-                              <span className="text-xs text-brown/50">
+                              <span className="text-xs text-brown-dark">
                                 {new Date(r.createdAt).toLocaleDateString('en', { month: 'short', day: 'numeric', year: 'numeric' })}
                               </span>
                             </div>
@@ -362,7 +362,7 @@ export function ProductDetailSection() {
                               <span className="text-[10px] bg-brand-green/10 text-brand-green px-1.5 py-0.5 rounded">Verified</span>
                             </div>
                             <p className="font-semibold text-sm text-brown-dark mt-1.5">{r.title}</p>
-                            <p className="text-sm text-brown/80 mt-1">{r.body}</p>
+                            <p className="text-sm text-brown-dark mt-1">{r.body}</p>
                           </div>
                         </div>
                       </Card>
@@ -389,13 +389,13 @@ export function ProductDetailSection() {
                     ].map((step, i) => (
                       <li key={i} className="flex gap-3">
                         <span className="h-7 w-7 rounded-full gradient-gold text-brown-dark flex items-center justify-center text-sm font-bold shrink-0">{i + 1}</span>
-                        <p className="text-brown/80 pt-0.5">{step}</p>
+                        <p className="text-brown-dark pt-0.5">{step}</p>
                       </li>
                     ))}
                   </ol>
                 ) : (
                   <div className="space-y-3">
-                    <p className="text-brown/80">SBF Special Shitor is a ready-to-eat condiment — no cooking needed. Here are some classic Ghanaian ways to enjoy it:</p>
+                    <p className="text-brown-dark">SBF Special Shitor is a ready-to-eat condiment — no cooking needed. Here are some classic Ghanaian ways to enjoy it:</p>
                     <ul className="space-y-2">
                       {[
                         'Pair with banku and grilled tilapia — the classic Ghanaian combo.',
@@ -405,7 +405,7 @@ export function ProductDetailSection() {
                         'Use as a marinade for chicken, fish or beef before grilling.',
                         'Top your morning eggs with a small dollop for a fiery start to the day.',
                       ].map((tip, i) => (
-                        <li key={i} className="flex gap-2 text-brown/80">
+                        <li key={i} className="flex gap-2 text-brown-dark">
                           <Check className="h-4 w-4 text-brand-green shrink-0 mt-0.5" /> {tip}
                         </li>
                       ))}
@@ -441,7 +441,7 @@ function Feature({ icon: Icon, title, body }: { icon: any; title: string; body: 
       </div>
       <div>
         <p className="text-sm font-semibold text-brown-dark">{title}</p>
-        <p className="text-xs text-brown/60">{body}</p>
+        <p className="text-xs text-brown-dark">{body}</p>
       </div>
     </div>
   );

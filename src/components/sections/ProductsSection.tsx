@@ -85,17 +85,17 @@ export function ProductsSection() {
           </div>
           <div className="flex gap-2">
             <div className="relative flex-1 md:w-64">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-brown/50" />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-brown-dark" />
               <Input
                 placeholder="Search products..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="pl-9 bg-cream border-gold/30 text-brown-dark placeholder:text-brown/40"
+                className="pl-9 bg-cream border-gold/30 text-brown-dark placeholder:text-brown-dark"
               />
             </div>
             <Select value={sort} onValueChange={setSort}>
               <SelectTrigger className="w-44 bg-cream border-gold/30 text-brown-dark">
-                <SlidersHorizontal className="h-4 w-4 mr-1 text-brown/60" />
+                <SlidersHorizontal className="h-4 w-4 mr-1 text-brown-dark" />
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
@@ -108,7 +108,7 @@ export function ProductsSection() {
           </div>
         </div>
 
-        <div className="flex items-center gap-2 text-sm text-brown/60 mb-4">
+        <div className="flex items-center gap-2 text-sm text-brown-dark mb-4">
           <Filter className="h-3.5 w-3.5" />
           <span>
             {loading ? 'Loading...' : `${filtered.length} product${filtered.length !== 1 ? 's' : ''}`}
@@ -134,10 +134,10 @@ export function ProductsSection() {
         ) : filtered.length === 0 ? (
           <div className="text-center py-20">
             <div className="h-20 w-20 rounded-full bg-cream-dark flex items-center justify-center mx-auto mb-4">
-              <Grid3x3 className="h-9 w-9 text-brown/40" />
+              <Grid3x3 className="h-9 w-9 text-brown-dark" />
             </div>
             <p className="font-display text-xl font-semibold text-brown-dark">No products found</p>
-            <p className="text-sm text-brown/60 mt-1">Try a different search or category.</p>
+            <p className="text-sm text-brown-dark mt-1">Try a different search or category.</p>
           </div>
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">

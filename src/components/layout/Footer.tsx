@@ -95,28 +95,28 @@ export function Footer() {
         <div>
           <h4 className="font-semibold text-gold mb-3 text-sm uppercase tracking-wider">Contact</h4>
           <ul className="space-y-3 text-sm">
-            <li className="flex items-start gap-2 text-cream/70">
+            <li className="flex items-start gap-2 text-white">
               <MapPin className="h-4 w-4 text-gold shrink-0 mt-0.5" />
               <span>Sefaperp Foods Factory<br/>Dzodze, Ketu North<br/>Volta Region, Ghana</span>
             </li>
-            <li className="flex items-start gap-2 text-cream/70">
+            <li className="flex items-start gap-2 text-white">
               <Phone className="h-4 w-4 text-gold shrink-0 mt-0.5" />
               <div className="flex flex-col gap-0.5">
-                <a href="tel:+233247968973" className="hover:text-gold">+233 247 968 973</a>
-                <a href="tel:+233553878748" className="hover:text-gold">+233 553 878 748 <span className="text-[10px] text-cream/50">(WhatsApp)</span></a>
+                <a href="tel:+233247968973" className="hover:text-gold font-semibold">+233 247 968 973</a>
+                <a href="tel:+233553878748" className="hover:text-gold font-semibold">+233 553 878 748 <span className="text-[10px] text-cream/70">(WhatsApp)</span></a>
               </div>
             </li>
-            <li className="flex items-center gap-2 text-cream/70">
+            <li className="flex items-center gap-2 text-white">
               <Mail className="h-4 w-4 text-gold shrink-0" />
-              <a href="mailto:hello@sbffoods.com" className="hover:text-gold">hello@sbffoods.com</a>
+              <a href="mailto:hello@sbffoods.com" className="hover:text-gold font-semibold">hello@sbffoods.com</a>
             </li>
           </ul>
           <div className="mt-4 flex gap-2 flex-wrap">
-            <span className="text-[10px] px-2 py-1 rounded bg-cream/10 text-cream/70">MTN MoMo</span>
-            <span className="text-[10px] px-2 py-1 rounded bg-cream/10 text-cream/70">Telecel</span>
-            <span className="text-[10px] px-2 py-1 rounded bg-cream/10 text-cream/70">Paystack</span>
-            <span className="text-[10px] px-2 py-1 rounded bg-cream/10 text-cream/70">Visa</span>
-            <span className="text-[10px] px-2 py-1 rounded bg-cream/10 text-cream/70">Mastercard</span>
+            <span className="text-[10px] px-2 py-1 rounded bg-cream/10 text-cream/90">MTN MoMo</span>
+            <span className="text-[10px] px-2 py-1 rounded bg-cream/10 text-cream/90">Telecel</span>
+            <span className="text-[10px] px-2 py-1 rounded bg-cream/10 text-cream/90">Paystack</span>
+            <span className="text-[10px] px-2 py-1 rounded bg-cream/10 text-cream/90">Visa</span>
+            <span className="text-[10px] px-2 py-1 rounded bg-cream/10 text-cream/90">Mastercard</span>
           </div>
         </div>
       </div>

@@ -44,7 +44,7 @@ export function AboutSection() {
               <h2 className="font-display text-3xl md:text-4xl font-bold text-brown-dark">
                 Six years of slow-craft tradition
               </h2>
-              <div className="space-y-4 text-brown/80 leading-relaxed">
+              <div className="space-y-4 text-brown-dark leading-relaxed">
                 <p>
                   Sefaperp Foods began in 2018 when two brothers from Dzodze — Kojo and Kofi — started roasting chili peppers and stone-grinding roasted maize in their family kitchen. The recipes had been passed down from their grandmother, who insisted that authentic Shitor requires patience: sun-dried peppers, slow-roasted over low heat, smoked fish added by hand, oils rising to the surface only after hours of careful simmering.
                 </p>
@@ -69,7 +69,7 @@ export function AboutSection() {
                 <Target className="h-6 w-6 text-brown-dark" />
               </div>
               <h3 className="font-display text-2xl font-bold text-brown-dark mb-2">Our Mission</h3>
-              <p className="text-brown/80 leading-relaxed">
+              <p className="text-brown-dark leading-relaxed">
                 To preserve and share authentic Ghanaian food heritage by crafting premium traditional foods in small batches — without preservatives, without shortcuts — and delivering them fresh to every household in Ghana and beyond. We exist to put real Ghanaian taste on every table.
               </p>
             </Card>
@@ -78,7 +78,7 @@ export function AboutSection() {
                 <Eye className="h-6 w-6 text-gold" />
               </div>
               <h3 className="font-display text-2xl font-bold text-brown-dark mb-2">Our Vision</h3>
-              <p className="text-brown/80 leading-relaxed">
+              <p className="text-brown-dark leading-relaxed">
                 To be Africa's most loved authentic food brand — recognised globally for quality, integrity, and the preservation of indigenous recipes. We envision Sefaperp Foods in every Ghanaian diaspora kitchen from London to Toronto, and a thriving distributor network creating jobs across all 16 regions of Ghana.
               </p>
             </Card>
@@ -94,7 +94,7 @@ export function AboutSection() {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-brown-dark mt-2">
               From farm to jar — every step audited
             </h2>
-            <p className="text-brown/70 mt-3">
+            <p className="text-brown-dark mt-3">
               Our Dzodze facility is FDA-approved, HACCP-compliant, and audited quarterly by independent food safety consultants.
             </p>
           </div>
@@ -116,7 +116,7 @@ export function AboutSection() {
                   'Microbiological testing of every production batch',
                   'Cold-chain monitoring for sensitive ingredients',
                 ].map((s) => (
-                  <li key={s} className="flex items-start gap-2 text-sm text-brown/80">
+                  <li key={s} className="flex items-start gap-2 text-sm text-brown-dark">
                     <CheckCircle2 className="h-4 w-4 text-brand-green shrink-0 mt-0.5" /> {s}
                   </li>
                 ))}
@@ -141,7 +141,7 @@ export function AboutSection() {
                     <span className="h-7 w-7 rounded-full gradient-gold text-brown-dark flex items-center justify-center text-sm font-bold shrink-0">{i + 1}</span>
                     <div>
                       <p className="font-semibold text-brown-dark text-sm">{s.step}</p>
-                      <p className="text-xs text-brown/70 mt-0.5">{s.body}</p>
+                      <p className="text-xs text-brown-dark mt-0.5">{s.body}</p>
                     </div>
                   </li>
                 ))}
@@ -170,7 +170,7 @@ export function AboutSection() {
                   <c.icon className="h-7 w-7 text-brown-dark" />
                 </div>
                 <p className="font-display font-bold text-brown-dark">{c.title}</p>
-                <p className="text-xs text-brown/60 mt-1">{c.sub}</p>
+                <p className="text-xs text-brown-dark mt-1">{c.sub}</p>
               </Card>
             ))}
           </div>
@@ -183,7 +183,7 @@ export function AboutSection() {
           <div className="text-center max-w-2xl mx-auto mb-12">
             <Badge className="bg-cream-dark text-brown-dark border border-gold/30">Our Team</Badge>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-brown-dark mt-2">The family behind Sefaperp Foods</h2>
-            <p className="text-brown/70 mt-3">From our Dzodze kitchen to your table — meet the people who keep our tradition alive.</p>
+            <p className="text-brown-dark mt-3">From our Dzodze kitchen to your table — meet the people who keep our tradition alive.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
@@ -197,7 +197,7 @@ export function AboutSection() {
                   <span className="font-display font-bold text-gold text-2xl">{m.initials}</span>
                 </div>
                 <p className="font-display font-bold text-brown-dark">{m.name}</p>
-                <p className="text-xs text-brown/60 mt-1">{m.role}</p>
+                <p className="text-xs text-brown-dark mt-1">{m.role}</p>
               </Card>
             ))}
           </div>
@@ -210,7 +210,7 @@ export function AboutSection() {
           <h2 className="font-display text-3xl md:text-4xl font-bold text-brown-dark text-balance max-w-2xl mx-auto">
             Taste the difference that small-batch, slow-craft tradition makes.
           </h2>
-          <p className="text-brown/70 mt-3 max-w-xl mx-auto">
+          <p className="text-brown-dark mt-3 max-w-xl mx-auto">
             Join 2,400+ happy customers across all 16 regions of Ghana. Fresh from Dzodze to your door.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">

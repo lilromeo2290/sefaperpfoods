@@ -34,10 +34,10 @@ export function CartSection() {
     return (
       <div className="container mx-auto px-4 py-20 min-h-[60vh] flex flex-col items-center justify-center text-center gap-4">
         <div className="h-24 w-24 rounded-full bg-cream-dark flex items-center justify-center">
-          <ShoppingBag className="h-10 w-10 text-brown/40" />
+          <ShoppingBag className="h-10 w-10 text-brown-dark" />
         </div>
         <h1 className="font-display text-3xl font-bold text-brown-dark">Your cart is empty</h1>
-        <p className="text-brown/60 max-w-md">
+        <p className="text-brown-dark max-w-md">
           Looks like you haven't added any authentic Ghanaian goodness yet. Explore our slow-crafted Shitor and Tom Brown — fresh from Dzodze.
         </p>
         <Button
@@ -74,7 +74,7 @@ export function CartSection() {
                   <div className="flex items-start justify-between gap-2">
                     <div className="min-w-0">
                       <h3 className="font-display font-bold text-brown-dark text-base line-clamp-1">{item.name}</h3>
-                      <p className="text-xs text-brown/60 mt-0.5">Size: {item.size}</p>
+                      <p className="text-xs text-brown-dark mt-0.5">Size: {item.size}</p>
                       <p className="text-sm font-bold text-brown mt-1">GHS {item.unitPrice.toFixed(2)}</p>
                     </div>
                     <button
@@ -134,7 +134,7 @@ export function CartSection() {
                     placeholder="Coupon (try WELCOME10)"
                     value={couponInput}
                     onChange={(e) => setCouponInput(e.target.value.toUpperCase())}
-                    className="bg-cream border-gold/30 text-brown-dark placeholder:text-brown/40"
+                    className="bg-cream border-gold/30 text-brown-dark placeholder:text-brown-dark"
                   />
                   <Button variant="outline" onClick={apply} className="border-brown text-brown hover:bg-cream">Apply</Button>
                 </div>
@@ -164,13 +164,13 @@ export function CartSection() {
                 <p className="text-xs font-semibold text-brown-dark flex items-center gap-1.5">
                   <Truck className="h-3 w-3 text-gold" /> Delivery estimate
                 </p>
-                <p className="text-xs text-brown/60">
+                <p className="text-xs text-brown-dark">
                   Accra & Kumasi: 24-48h • Other regions: 2-4 days. GPS coordinates required at checkout.
                 </p>
                 <p className="text-xs font-semibold text-brown-dark mt-2">Payment methods</p>
                 <div className="flex flex-wrap gap-1">
                   {['MTN MoMo', 'Telecel', 'AirtelTigo', 'Paystack', 'Visa', 'Mastercard'].map((m) => (
-                    <Badge key={m} variant="outline" className="text-[10px] border-gold/30 text-brown/70">{m}</Badge>
+                    <Badge key={m} variant="outline" className="text-[10px] border-gold/30 text-brown-dark">{m}</Badge>
                   ))}
                 </div>
               </div>
@@ -185,7 +185,7 @@ export function CartSection() {
 function Row({ label, value, green }: { label: string; value: string; green?: boolean }) {
   return (
     <div className="flex justify-between">
-      <span className={green ? 'text-brand-green' : 'text-brown/70'}>{label}</span>
+      <span className={green ? 'text-brand-green' : 'text-brown-dark'}>{label}</span>
       <span className={green ? 'text-brand-green font-medium' : 'text-brown-dark font-medium'}>{value}</span>
     </div>
   );
