@@ -52,3 +52,10 @@ prompt
 server.log
 # Skills directory
 .gh_token
+# Skills directory (not part of the project)
+/skills/
+
+# Upload directory (user uploads, not part of repo)
+/upload/
+# Tool results (temporary)
+/tool-results/
