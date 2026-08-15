@@ -50,9 +50,9 @@ export function HomeSection() {
               </Badge>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.05] text-burgundy text-balance">
                 Quality, Taste & Trust,
-                <span className="block text-gradient-gold mt-2">Delivered Fresh.</span>
+                <span className="block text-gold-dark mt-2">Delivered Fresh.</span>
               </h1>
-              <p className="text-base md:text-lg text-burgundy/80 max-w-xl mx-auto lg:mx-0 text-pretty">
+              <p className="text-base md:text-lg text-burgundy max-w-xl mx-auto lg:mx-0 text-pretty">
                 Premium Shitor, Tom Brown Powder and traditional Ghanaian foods — slow-roasted in small batches in Dzodze and delivered to your door across Ghana. Pay with Mobile Money or card. Track every step.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
@@ -136,7 +136,7 @@ export function HomeSection() {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-brown-dark">FDA Approved</p>
-                  <p className="text-[10px] text-brown/60">Food Safety Certified</p>
+                  <p className="text-[10px] text-brown-dark/75">Food Safety Certified</p>
                 </div>
               </Card>
               {/* floating badge: Made in Ghana */}
@@ -146,7 +146,7 @@ export function HomeSection() {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-brown-dark">Made in Ghana</p>
-                  <p className="text-[10px] text-brown/60">Crafted in Dzodze, Volta Region</p>
+                  <p className="text-[10px] text-brown-dark/75">Crafted in Dzodze, Volta Region</p>
                 </div>
               </Card>
             </div>
@@ -190,7 +190,7 @@ export function HomeSection() {
               </div>
               <div>
                 <p className="text-sm font-semibold text-brown-dark">{f.label}</p>
-                <p className="text-[11px] text-brown/60">{f.sub}</p>
+                <p className="text-[11px] text-brown-dark/75">{f.sub}</p>
               </div>
             </div>
           ))}
@@ -211,10 +211,10 @@ export function HomeSection() {
               <h2 className="font-display text-3xl md:text-4xl font-bold text-brown-dark text-balance">
                 Born in Dzodze. Rooted in tradition. Made for every Ghanaian table.
               </h2>
-              <p className="text-brown/80 leading-relaxed">
+              <p className="text-brown-dark leading-relaxed">
                 Sefaperp Foods began as a small family kitchen in Dzodze, Volta Region, where the brothers would slow-roast chili peppers and stone-grind roasted maize to make Shitor and Tom Brown for their community. The demand grew beyond Volta, and today we ship nationwide — but our recipes and our slow-craft method have not changed.
               </p>
-              <p className="text-brown/80 leading-relaxed">
+              <p className="text-brown-dark leading-relaxed">
                 Every jar of Shitor is still simmered in small batches with smoked fish, dried shrimp and sun-dried peppers. Every bag of Tom Brown is still stone-ground from roasted maize, soybean and groundnut. No shortcuts. No preservatives. Just the authentic taste of home, delivered fresh.
               </p>
               <Button
@@ -238,7 +238,7 @@ export function HomeSection() {
               <h2 className="font-display text-3xl md:text-4xl font-bold text-brown-dark mt-2">
                 Our signature products
               </h2>
-              <p className="text-brown/70 mt-2 max-w-xl">
+              <p className="text-brown-dark/85 mt-2 max-w-xl">
                 Slow-crafted Ghanaian classics — from our kitchen in Dzodze to your table anywhere in Ghana.
               </p>
             </div>
@@ -262,7 +262,7 @@ export function HomeSection() {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-brown-dark mt-2">
               Six reasons families choose us
             </h2>
-            <p className="text-brown/70 mt-3">
+            <p className="text-brown-dark/85 mt-3">
               We obsess over quality at every step — from sourcing sun-dried peppers to last-mile delivery.
             </p>
           </div>
@@ -298,7 +298,7 @@ export function HomeSection() {
                     </div>
                   )}
                   <h3 className="font-display font-bold text-brown-dark text-lg mb-2">{f.title}</h3>
-                  <p className="text-sm text-brown/70 leading-relaxed">{f.body}</p>
+                  <p className="text-sm text-brown-dark/85 leading-relaxed">{f.body}</p>
                 </div>
               </Card>
             ))}
@@ -315,7 +315,7 @@ export function HomeSection() {
               <h2 className="font-display text-3xl md:text-4xl font-bold text-brown-dark">
                 We deliver to all 16 regions of Ghana
               </h2>
-              <p className="text-brown/80">
+              <p className="text-brown-dark">
                 From our dispatch hub in Dzodze, we ship nationwide. Our logistics partners cover Greater Accra, Volta, Oti, Eastern, Ashanti, Western, Western North, Central, Bono, Bono East, Ahafo, Northern, Savannah, North East, Upper East and Upper West.
               </p>
               <div className="grid grid-cols-2 gap-3 pt-2">
@@ -398,9 +398,9 @@ export function HomeSection() {
                 </div>
                 <div className="p-5">
                   <h3 className="font-display font-bold text-brown-dark text-lg leading-tight">{n.title}</h3>
-                  <p className={`text-sm text-brown/70 mt-2 ${(n.featured || n.showFull) ? '' : 'line-clamp-3'}`}>{n.excerpt}</p>
+                  <p className={`text-sm text-brown-dark/85 mt-2 ${(n.featured || n.showFull) ? '' : 'line-clamp-3'}`}>{n.excerpt}</p>
                   {n.excerpt2 && (
-                    <p className="text-sm text-brown/70 mt-3">{n.excerpt2}</p>
+                    <p className="text-sm text-brown-dark/85 mt-3">{n.excerpt2}</p>
                   )}
                 </div>
               </Card>
@@ -421,7 +421,7 @@ function DeliveryCity({ city, eta, highlight }: { city: string; eta: string; hig
       <span className="flex items-center gap-2 text-sm font-medium text-brown-dark">
         <MapPin className="h-3.5 w-3.5 text-gold" /> {city}
       </span>
-      <span className="text-xs text-brown/60">{eta}</span>
+      <span className="text-xs text-brown-dark/75">{eta}</span>
     </div>
   );
 }

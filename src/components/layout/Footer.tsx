@@ -18,7 +18,7 @@ export function Footer() {
             <h3 className="font-display text-2xl md:text-3xl font-bold text-gold">
               Get Ghanaian recipes & exclusive offers
             </h3>
-            <p className="text-cream/70 mt-2 text-sm md:text-base">
+            <p className="text-cream/90 mt-2 text-sm md:text-base">
               Join our newsletter for seasonal promos, new product drops, and authentic recipe ideas from Dzodze.
             </p>
           </div>
@@ -54,7 +54,7 @@ export function Footer() {
               style={{ filter: 'drop-shadow(0 4px 12px rgba(212,175,55,0.4))' }}
             />
           </div>
-          <p className="text-sm text-cream/70 leading-relaxed">
+          <p className="text-sm text-cream/90 leading-relaxed">
             Authentic Ghanaian food products crafted in small batches from Dzodze, Volta Region. Quality you can taste, tradition you can trust — delivered fresh across Ghana.
           </p>
           <div className="flex gap-2 mt-4">
@@ -73,22 +73,22 @@ export function Footer() {
         <div>
           <h4 className="font-semibold text-gold mb-3 text-sm uppercase tracking-wider">Shop</h4>
           <ul className="space-y-2 text-sm">
-            <li><button onClick={() => go('products')} className="text-cream/70 hover:text-gold">All Products</button></li>
-            <li><button onClick={() => go('product', 'sbf-special-shitor')} className="text-cream/70 hover:text-gold">SBF Special Shitor</button></li>
-            <li><button onClick={() => go('product', 'sbf-tom-brown-powder')} className="text-cream/70 hover:text-gold">SBF Tom Brown Powder</button></li>
-            <li><button onClick={() => go('cart')} className="text-cream/70 hover:text-gold">Cart & Checkout</button></li>
-            <li><button onClick={() => go('distributor')} className="text-cream/70 hover:text-gold">Bulk Orders</button></li>
+            <li><button onClick={() => go('products')} className="text-cream/90 hover:text-gold">All Products</button></li>
+            <li><button onClick={() => go('product', 'sbf-special-shitor')} className="text-cream/90 hover:text-gold">SBF Special Shitor</button></li>
+            <li><button onClick={() => go('product', 'sbf-tom-brown-powder')} className="text-cream/90 hover:text-gold">SBF Tom Brown Powder</button></li>
+            <li><button onClick={() => go('cart')} className="text-cream/90 hover:text-gold">Cart & Checkout</button></li>
+            <li><button onClick={() => go('distributor')} className="text-cream/90 hover:text-gold">Bulk Orders</button></li>
           </ul>
         </div>
 
         <div>
           <h4 className="font-semibold text-gold mb-3 text-sm uppercase tracking-wider">Company</h4>
           <ul className="space-y-2 text-sm">
-            <li><button onClick={() => go('about')} className="text-cream/70 hover:text-gold">About Sefaperp Foods</button></li>
-            <li><button onClick={() => go('about')} className="text-cream/70 hover:text-gold">Manufacturing Process</button></li>
-            <li><button onClick={() => go('about')} className="text-cream/70 hover:text-gold">Food Safety & Certifications</button></li>
-            <li><button onClick={() => go('distributor')} className="text-cream/70 hover:text-gold">Become a Distributor</button></li>
-            <li><button onClick={() => go('admin')} className="text-cream/70 hover:text-gold">Staff Portal</button></li>
+            <li><button onClick={() => go('about')} className="text-cream/90 hover:text-gold">About Sefaperp Foods</button></li>
+            <li><button onClick={() => go('about')} className="text-cream/90 hover:text-gold">Manufacturing Process</button></li>
+            <li><button onClick={() => go('about')} className="text-cream/90 hover:text-gold">Food Safety & Certifications</button></li>
+            <li><button onClick={() => go('distributor')} className="text-cream/90 hover:text-gold">Become a Distributor</button></li>
+            <li><button onClick={() => go('admin')} className="text-cream/90 hover:text-gold">Staff Portal</button></li>
           </ul>
         </div>
 
