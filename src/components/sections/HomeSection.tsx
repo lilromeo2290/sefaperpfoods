@@ -334,6 +334,7 @@ export function HomeSection() {
               {
                 tag: 'Recipe',
                 title: '5 Ways to Enjoy SBF Shitor',
+                image: '/news-5-ways.png',
                 excerpt: 'Experience the rich, smoky, and authentic taste of SBF Shitor, carefully prepared from quality ingredients to bring true Ghanaian flavour to every meal.',
                 ways: [
                   'Banku & grilled tilapia',
