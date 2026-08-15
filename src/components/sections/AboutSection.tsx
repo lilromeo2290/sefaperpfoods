@@ -94,9 +94,6 @@ export function AboutSection() {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-brown-dark mt-2">
               From farm to jar — every step audited
             </h2>
-            <p className="text-brown-dark mt-3">
-              Our Dzodze facility is FDA-approved, HACCP-compliant, and audited quarterly by independent food safety consultants.
-            </p>
           </div>
 
           <div className="max-w-2xl mx-auto">
