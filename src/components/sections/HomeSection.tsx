@@ -268,19 +268,38 @@ export function HomeSection() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              { icon: Leaf, title: '100% Natural Ingredients', body: 'Sun-dried chili peppers, smoked fish, dried shrimp, stone-ground roasted cereals. No preservatives, no artificial colours — ever.' },
-              { icon: Shield, title: 'FDA-Approved Facility', body: 'Our Dzodze factory is FDA-certified and audited quarterly. HACCP-compliant process from raw material intake to sealing.' },
-              { icon: Truck, title: 'Fresh & Fast Delivery', body: '24-48h in Greater Accra, Kumasi, Takoradi, Ho, Koforidua. 2-4 days elsewhere. GPS-tracked from our dispatch to your door.' },
+              { icon: Leaf, title: '100% Natural Ingredients', body: 'Sun-dried chili peppers, smoked fish, dried shrimp, stone-ground roasted cereals. No preservatives, no artificial colours — ever.', image: '/feature-ingredients.png' },
+              { icon: Shield, title: 'FDA-Approved Facility', body: 'Our Dzodze factory is FDA-certified and audited quarterly. HACCP-compliant process from raw material intake to sealing.', image: '/feature-fda-approved.png' },
+              { icon: Truck, title: 'Fresh & Fast Delivery', body: '24-48h in Greater Accra, Kumasi, Takoradi, Ho, Koforidua. 2-4 days elsewhere. GPS-tracked from our dispatch to your door.', image: '/feature-fresh-delivery.png' },
               { icon: Heart, title: 'Made in Small Batches', body: 'We slow-roast and stone-grind in small batches to preserve flavour and nutrition. Every batch is taste-tested before packing.' },
               { icon: Phone, title: 'Mobile Money & Cards', body: 'Pay with MTN, Telecel, AirtelTigo, Hubtel, Paystack, ExpressPay, Visa or Mastercard. Instant confirmation, automated receipts.' },
               { icon: Users, title: 'Distributor Network', body: 'Become a distributor and unlock bulk pricing, regional exclusivity and dedicated invoices. Apply in 2 minutes — approval in 48 hours.' },
             ].map((f, i) => (
-              <Card key={i} className="p-6 border-gold/15 hover:border-gold/40 hover:shadow-brown transition-all">
-                <div className="h-12 w-12 rounded-xl gradient-gold flex items-center justify-center mb-4 shadow-gold">
-                  <f.icon className="h-6 w-6 text-brown-dark" />
+              <Card key={i} className="overflow-hidden p-0 border-gold/15 hover:border-gold/40 hover:shadow-brown transition-all">
+                {f.image ? (
+                  <div className="aspect-[16/9] bg-cream-dark relative overflow-hidden">
+                    <img
+                      src={f.image}
+                      alt={f.title}
+                      className="absolute inset-0 h-full w-full object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                ) : (
+                  <div className="p-6">
+                    <div className="h-12 w-12 rounded-xl gradient-gold flex items-center justify-center mb-4 shadow-gold">
+                      <f.icon className="h-6 w-6 text-brown-dark" />
+                    </div>
+                  </div>
+                )}
+                <div className="p-6">
+                  {!f.image && (
+                    <div className="h-12 w-12 rounded-xl gradient-gold flex items-center justify-center mb-4 shadow-gold">
+                      <f.icon className="h-6 w-6 text-brown-dark" />
+                    </div>
+                  )}
+                  <h3 className="font-display font-bold text-brown-dark text-lg mb-2">{f.title}</h3>
+                  <p className="text-sm text-brown/70 leading-relaxed">{f.body}</p>
                 </div>
-                <h3 className="font-display font-bold text-brown-dark text-lg mb-2">{f.title}</h3>
-                <p className="text-sm text-brown/70 leading-relaxed">{f.body}</p>
               </Card>
             ))}
           </div>
