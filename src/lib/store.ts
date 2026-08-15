@@ -119,7 +119,7 @@ export const useApp = create<AppState>()(
       login: (email, role = 'CUSTOMER') =>
         set({
           authUser: {
-            name: role === 'ADMIN' ? 'SBF Admin' : role === 'DISTRIBUTOR' ? 'Distributor' : 'Customer',
+            name: role === 'ADMIN' ? 'Admin' : role === 'DISTRIBUTOR' ? 'Distributor' : 'Customer',
             email,
             role,
           },

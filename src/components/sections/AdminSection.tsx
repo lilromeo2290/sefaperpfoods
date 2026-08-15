@@ -43,14 +43,31 @@ export function AdminSection() {
             <h1 className="font-display text-2xl font-bold text-brown-dark">Staff Portal</h1>
             <p className="text-brown-dark text-sm mt-1">Sign in to access the admin dashboard.</p>
           </div>
-          <form onSubmit={(e) => { e.preventDefault(); login('admin@sbffoods.com', 'ADMIN'); toast.success('Welcome back, Admin'); }} className="space-y-3">
-            <Input type="email" placeholder="admin@sbffoods.com" defaultValue="admin@sbffoods.com" className="bg-cream border-gold/30 text-brown-dark" />
-            <Input type="password" placeholder="Password" defaultValue="demo-admin-2026" className="bg-cream border-gold/30 text-brown-dark" />
+          <form onSubmit={(e) => {
+            e.preventDefault();
+            const formData = new FormData(e.currentTarget);
+            const username = formData.get('username') as string;
+            const password = formData.get('password') as string;
+            if (username === 'admin' && password === 'Clipe233@eng!') {
+              login('admin', 'ADMIN');
+              toast.success('Welcome back, Admin');
+            } else {
+              toast.error('Invalid credentials. Please check your username and password.');
+            }
+          }} className="space-y-3">
+            <div>
+              <label className="text-xs font-medium text-brown-dark mb-1 block">Username</label>
+              <Input name="username" placeholder="Enter username" required className="bg-cream border-gold/30 text-brown-dark" />
+            </div>
+            <div>
+              <label className="text-xs font-medium text-brown-dark mb-1 block">Password</label>
+              <Input name="password" type="password" placeholder="Enter password" required className="bg-cream border-gold/30 text-brown-dark" />
+            </div>
             <Button type="submit" className="w-full gradient-brown text-cream hover:opacity-90 font-semibold h-11">
-              Sign In as Admin
+              Sign In
             </Button>
           </form>
-          <p className="text-xs text-brown-dark mt-4 text-center">Demo credentials are pre-filled. Click Sign In to explore.</p>
+          <p className="text-xs text-brown-dark mt-4 text-center">Staff access only. Contact your administrator if you need credentials.</p>
         </Card>
       </div>
     );
