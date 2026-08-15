@@ -105,19 +105,16 @@ export default function RootLayout({
               if ('serviceWorker' in navigator) {
                 window.addEventListener('load', async () => {
                   try {
-                    // Unregister ALL existing service workers (clean slate)
                     const registrations = await navigator.serviceWorker.getRegistrations();
                     for (const reg of registrations) {
                       await reg.unregister();
                     }
-                    // Clear ALL caches
                     if ('caches' in window) {
                       const keys = await caches.keys();
                       for (const k of keys) {
                         await caches.delete(k);
                       }
                     }
-                    // Register the fresh (no-cache) service worker
                     await navigator.serviceWorker.register('/sw.js?v=' + Date.now());
                   } catch (e) {}
                 });
@@ -125,6 +122,35 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Critical custom utilities — injected inline to bypass Turbopack CSS cache issues */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            .gradient-brown, .gradient-burgundy {
+              background: linear-gradient(135deg, #8B2A33 0%, #6B1C23 50%, #4A0F14 100%) !important;
+            }
+            .gradient-gold {
+              background: linear-gradient(135deg, #E8D5A3 0%, #D4AF37 50%, #B8943D 100%) !important;
+            }
+            .gradient-hero {
+              background:
+                radial-gradient(ellipse at top, rgba(212, 175, 55, 0.35), transparent 60%),
+                radial-gradient(ellipse at bottom right, rgba(107, 28, 35, 0.25), transparent 60%),
+                linear-gradient(180deg, #FAF8F5 0%, #FDFBF7 100%) !important;
+            }
+            .glass {
+              background: rgba(250, 248, 245, 0.75) !important;
+              backdrop-filter: blur(12px);
+              -webkit-backdrop-filter: blur(12px);
+              border: 1px solid rgba(212, 175, 55, 0.25);
+            }
+            .shadow-gold {
+              box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.6) !important;
+            }
+            .shadow-brown {
+              box-shadow: 0 10px 30px -10px rgba(107, 28, 35, 0.4) !important;
+            }
+          `
+        }} />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased bg-background text-foreground`}

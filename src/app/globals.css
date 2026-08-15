@@ -153,107 +153,112 @@
   }
 }
 
-@layer utilities {
-  .text-balance { text-wrap: balance; }
-  .text-pretty { text-wrap: pretty; }
+/* Custom utilities — defined as plain CSS (not in @layer utilities)
+   because Tailwind CSS 4 does not emit custom classes from @layer utilities
+   unless they are registered via @utility. Plain CSS ensures they always work. */
+.text-balance { text-wrap: balance; }
+.text-pretty { text-wrap: pretty; }
 
-  .bg-grain {
-    background-image:
-      radial-gradient(circle at 1px 1px, rgba(212, 175, 55, 0.15) 1px, transparent 0);
-    background-size: 22px 22px;
-  }
-  /* Burgundy + Gold pattern inspired by the logo */
-  .bg-ghana-pattern {
-    background-color: #FAF8F5;
-    background-image:
-      linear-gradient(135deg, rgba(212, 175, 55, 0.10) 25%, transparent 25%),
-      linear-gradient(225deg, rgba(212, 175, 55, 0.10) 25%, transparent 25%),
-      linear-gradient(45deg, rgba(107, 28, 35, 0.06) 25%, transparent 25%),
-      linear-gradient(315deg, rgba(107, 28, 35, 0.06) 25%, transparent 25%);
-    background-size: 60px 60px;
-    background-position: 0 0, 30px 30px, 30px 30px, 0 0;
-  }
-  .gradient-gold {
-    background: linear-gradient(135deg, #E8D5A3 0%, #D4AF37 50%, #B8943D 100%);
-  }
-  .gradient-burgundy {
-    background: linear-gradient(135deg, #8B2A33 0%, #6B1C23 50%, #4A0F14 100%);
-  }
-  .gradient-hero {
-    background:
-      radial-gradient(ellipse at top, rgba(212, 175, 55, 0.35), transparent 60%),
-      radial-gradient(ellipse at bottom right, rgba(107, 28, 35, 0.25), transparent 60%),
-      linear-gradient(180deg, #FAF8F5 0%, #FDFBF7 100%);
-  }
-  .text-gradient-gold {
-    background: linear-gradient(135deg, #E8D5A3 0%, #D4AF37 50%, #B8943D 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .text-gradient-burgundy {
-    background: linear-gradient(135deg, #8B2A33 0%, #6B1C23 50%, #4A0F14 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .shadow-gold {
-    box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.6);
-  }
-  .shadow-burgundy {
-    box-shadow: 0 10px 30px -10px rgba(107, 28, 35, 0.5);
-  }
-  .shadow-brown {
-    box-shadow: 0 10px 30px -10px rgba(107, 28, 35, 0.4);
-  }
-  .scrollbar-thin {
-    scrollbar-width: thin;
-    scrollbar-color: #D4AF37 transparent;
-  }
-  .scrollbar-thin::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-  }
-  .scrollbar-thin::-webkit-scrollbar-thumb {
-    background: #D4AF37;
-    border-radius: 3px;
-  }
-  .scrollbar-thin::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
-  }
-  .animate-shimmer {
-    background: linear-gradient(90deg, #F0E6D2 0%, #E8D5A3 50%, #F0E6D2 100%);
-    background-size: 200% 100%;
-    animation: shimmer 2.5s linear infinite;
-  }
-  @keyframes shimmer {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-  }
-  .glass {
-    background: rgba(250, 248, 245, 0.75);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(212, 175, 55, 0.25);
-  }
-  .glass-dark {
-    background: rgba(42, 20, 24, 0.75);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(212, 175, 55, 0.35);
-  }
-  /* Decorative gold ring (logo-inspired) */
-  .ring-gold-double {
-    box-shadow:
-      inset 0 0 0 2px #D4AF37,
-      inset 0 0 0 4px #FAF8F5,
-      inset 0 0 0 5px #B8943D;
-  }
+.bg-grain {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(212, 175, 55, 0.15) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+/* Burgundy + Gold pattern inspired by the logo */
+.bg-ghana-pattern {
+  background-color: #FAF8F5;
+  background-image:
+    linear-gradient(135deg, rgba(212, 175, 55, 0.10) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(212, 175, 55, 0.10) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(107, 28, 35, 0.06) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(107, 28, 35, 0.06) 25%, transparent 25%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px, 30px 30px, 0 0;
+}
+.gradient-gold {
+  background: linear-gradient(135deg, #E8D5A3 0%, #D4AF37 50%, #B8943D 100%) !important;
+}
+.gradient-burgundy {
+  background: linear-gradient(135deg, #8B2A33 0%, #6B1C23 50%, #4A0F14 100%) !important;
+}
+/* Alias: gradient-brown = gradient-burgundy (kept for backward compatibility) */
+.gradient-brown {
+  background: linear-gradient(135deg, #8B2A33 0%, #6B1C23 50%, #4A0F14 100%) !important;
+}
+.gradient-hero {
+  background:
+    radial-gradient(ellipse at top, rgba(212, 175, 55, 0.35), transparent 60%),
+    radial-gradient(ellipse at bottom right, rgba(107, 28, 35, 0.25), transparent 60%),
+    linear-gradient(180deg, #FAF8F5 0%, #FDFBF7 100%);
+}
+.text-gradient-gold {
+  background: linear-gradient(135deg, #E8D5A3 0%, #D4AF37 50%, #B8943D 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.text-gradient-burgundy {
+  background: linear-gradient(135deg, #8B2A33 0%, #6B1C23 50%, #4A0F14 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.shadow-gold {
+  box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.6);
+}
+.shadow-burgundy {
+  box-shadow: 0 10px 30px -10px rgba(107, 28, 35, 0.5);
+}
+.shadow-brown {
+  box-shadow: 0 10px 30px -10px rgba(107, 28, 35, 0.4);
+}
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #D4AF37 transparent;
+}
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 3px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.animate-shimmer {
+  background: linear-gradient(90deg, #F0E6D2 0%, #E8D5A3 50%, #F0E6D2 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2.5s linear infinite;
+}
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+.glass {
+  background: rgba(250, 248, 245, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+.glass-dark {
+  background: rgba(42, 20, 24, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+}
+/* Decorative gold ring (logo-inspired) */
+.ring-gold-double {
+  box-shadow:
+    inset 0 0 0 2px #D4AF37,
+    inset 0 0 0 4px #FAF8F5,
+    inset 0 0 0 5px #B8943D;
 }
