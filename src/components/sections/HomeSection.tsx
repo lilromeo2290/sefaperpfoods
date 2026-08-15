@@ -402,9 +402,6 @@ export function HomeSection() {
                   {n.excerpt2 && (
                     <p className="text-sm text-brown/70 mt-3">{n.excerpt2}</p>
                   )}
-                  <button className="text-xs font-semibold text-brown mt-3 flex items-center gap-1 hover:text-gold">
-                    Read more <ArrowRight className="h-3 w-3" />
-                  </button>
                 </div>
               </Card>
             ))}
