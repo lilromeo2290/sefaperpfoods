@@ -345,16 +345,31 @@ export function HomeSection() {
                 excerpt2: 'SBF Shitor adds a delicious spicy kick that transforms ordinary meals into memorable dining experiences. You can also use it as a cooking ingredient to enrich soups, stews, sauces, and other local dishes. Made with love, passion, and traditional recipes — bringing the taste of Ghana to every spoonful.',
                 featured: true,
               },
-              { tag: 'Story', title: 'How we slow-roast our peppers in Dzodze', excerpt: 'A behind-the-scenes look at our small-batch roasting process that gives SBF Shitor its signature deep, smoky heat.' },
+              {
+                tag: 'Story',
+                title: 'How we slow-roast our peppers in Dzodze',
+                image: '/news-slow-roast.png',
+                excerpt: 'At SBF Foods, great flavour starts with quality ingredients. We carefully select fresh peppers and prepare them using our traditional slow-roasting process in small batches. Roasted over a controlled fire, the peppers develop a rich, deep, and smoky flavour that gives SBF Shitor its unique taste. After roasting, they are blended with premium ingredients and packaged with care to deliver an authentic Ghanaian condiment that brings bold flavour to every meal.',
+                excerpt2: 'Deep. Smoky. Authentic. That\'s the SBF Shitor Difference.',
+                showFull: true,
+              },
               { tag: 'Health', title: 'Why Tom Brown beats imported cereal', excerpt: 'Stone-ground roasted maize, soybean and groundnut pack more fibre and protein than commercial breakfast cereals.' },
             ].map((n, i) => (
               <Card key={i} className={`overflow-hidden border-gold/15 hover:shadow-brown transition-shadow cursor-pointer group ${n.featured ? 'md:col-span-1 ring-2 ring-gold/30' : ''}`}>
                 <div className="aspect-[16/9] bg-cream-dark relative overflow-hidden">
+                  {n.image ? (
+                    <img
+                      src={n.image}
+                      alt={n.title}
+                      className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Sparkles className="h-12 w-12 text-gold/40 group-hover:scale-110 transition-transform" />
+                    </div>
+                  )}
                   <div className="absolute bottom-3 left-3">
                     <Badge className="bg-gold text-brown-dark">{n.tag}</Badge>
-                  </div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Sparkles className="h-12 w-12 text-gold/40 group-hover:scale-110 transition-transform" />
                   </div>
                   {n.featured && (
                     <div className="absolute top-3 right-3">
@@ -364,7 +379,7 @@ export function HomeSection() {
                 </div>
                 <div className="p-5">
                   <h3 className="font-display font-bold text-brown-dark text-lg leading-tight">{n.title}</h3>
-                  <p className={`text-sm text-brown/70 mt-2 ${n.featured ? '' : 'line-clamp-3'}`}>{n.excerpt}</p>
+                  <p className={`text-sm text-brown/70 mt-2 ${(n.featured || n.showFull) ? '' : 'line-clamp-3'}`}>{n.excerpt}</p>
                   {n.ways && (
                     <ol className="mt-3 space-y-1.5">
                       {n.ways.map((w, wi) => (
