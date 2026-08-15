@@ -271,9 +271,9 @@ export function HomeSection() {
               { icon: Leaf, title: '100% Natural Ingredients', body: 'Sun-dried chili peppers, smoked fish, dried shrimp, stone-ground roasted cereals. No preservatives, no artificial colours — ever.', image: '/feature-ingredients.png' },
               { icon: Shield, title: 'FDA-Approved Facility', body: 'Our Dzodze factory is FDA-certified and audited quarterly. HACCP-compliant process from raw material intake to sealing.', image: '/feature-fda-approved.png' },
               { icon: Truck, title: 'Fresh & Fast Delivery', body: '24-48h in Greater Accra, Kumasi, Takoradi, Ho, Koforidua. 2-4 days elsewhere. GPS-tracked from our dispatch to your door.', image: '/feature-fresh-delivery.png' },
-              { icon: Heart, title: 'Made in Small Batches', body: 'We slow-roast and stone-grind in small batches to preserve flavour and nutrition. Every batch is taste-tested before packing.' },
-              { icon: Phone, title: 'Mobile Money & Cards', body: 'Pay with MTN, Telecel, AirtelTigo, Hubtel, Paystack, ExpressPay, Visa or Mastercard. Instant confirmation, automated receipts.' },
-              { icon: Users, title: 'Distributor Network', body: 'Become a distributor and unlock bulk pricing, regional exclusivity and dedicated invoices. Apply in 2 minutes — approval in 48 hours.' },
+              { icon: Heart, title: 'Made in Small Batches', body: 'We slow-roast and stone-grind in small batches to preserve flavour and nutrition. Every batch is taste-tested before packing.', image: '/feature-small-batches.png' },
+              { icon: Phone, title: 'Mobile Money & Cards', body: 'Pay with MTN, Telecel, AirtelTigo, Hubtel, Paystack, ExpressPay, Visa or Mastercard. Instant confirmation, automated receipts.', image: '/feature-momo.png' },
+              { icon: Users, title: 'Distributor Network', body: 'Become a distributor and unlock bulk pricing, regional exclusivity and dedicated invoices. Apply in 2 minutes — approval in 48 hours.', image: '/feature-distributor.png' },
             ].map((f, i) => (
               <Card key={i} className="overflow-hidden p-0 border-gold/15 hover:border-gold/40 hover:shadow-brown transition-all">
                 {f.image ? (
