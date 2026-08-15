@@ -354,7 +354,12 @@ export function HomeSection() {
                 excerpt2: 'Deep. Smoky. Authentic. That\'s the SBF Shitor Difference.',
                 showFull: true,
               },
-              { tag: 'Health', title: 'Why Tom Brown beats imported cereal', excerpt: 'Stone-ground roasted maize, soybean and groundnut pack more fibre and protein than commercial breakfast cereals.' },
+              {
+                tag: 'Health',
+                title: 'Why Tom Brown Beats Imported Cereal',
+                excerpt: 'SBF Tom Brown is a wholesome, nutrient-rich breakfast made from carefully roasted maize, soybean, and groundnut. Unlike many imported cereals that contain added sugars and artificial ingredients, Tom Brown provides natural fibre, protein, and lasting energy to keep you active throughout the day. It is a healthy, affordable, and locally made choice for children, adults, and the entire family.',
+                showFull: true,
+              },
             ].map((n, i) => (
               <Card key={i} className={`overflow-hidden border-gold/15 hover:shadow-brown transition-shadow cursor-pointer group ${n.featured ? 'md:col-span-1 ring-2 ring-gold/30' : ''}`}>
                 <div className="aspect-[16/9] bg-cream-dark relative overflow-hidden">
