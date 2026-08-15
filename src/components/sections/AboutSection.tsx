@@ -86,7 +86,7 @@ export function AboutSection() {
         </div>
       </section>
 
-      {/* Food safety + manufacturing */}
+      {/* Manufacturing Process */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
@@ -99,30 +99,7 @@ export function AboutSection() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Food Safety */}
-            <Card className="p-6 border-gold/15">
-              <h3 className="font-display text-xl font-bold text-brown-dark mb-4 flex items-center gap-2">
-                <Shield className="h-5 w-5 text-gold" /> Food Safety Standards
-              </h3>
-              <ul className="space-y-2.5">
-                {[
-                  'FDA Ghana certification (renewed annually)',
-                  'HACCP-compliant process flow',
-                  'Quarterly independent food safety audits',
-                  'All staff trained in GMP (Good Manufacturing Practices)',
-                  'Metal detector on every packaging line',
-                  'Batch traceability from raw material to consumer',
-                  'Microbiological testing of every production batch',
-                  'Cold-chain monitoring for sensitive ingredients',
-                ].map((s) => (
-                  <li key={s} className="flex items-start gap-2 text-sm text-brown-dark">
-                    <CheckCircle2 className="h-4 w-4 text-brand-green shrink-0 mt-0.5" /> {s}
-                  </li>
-                ))}
-              </ul>
-            </Card>
-
+          <div className="max-w-2xl mx-auto">
             {/* Manufacturing */}
             <Card className="p-6 border-gold/15">
               <h3 className="font-display text-xl font-bold text-brown-dark mb-4 flex items-center gap-2">
@@ -147,32 +124,6 @@ export function AboutSection() {
                 ))}
               </ol>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Certifications */}
-      <section className="py-16 md:py-24 border-y border-gold/15">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <Badge className="bg-brown text-cream"><Award className="h-3 w-3 mr-1" /> Certifications</Badge>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-brown-dark mt-2">Certified for your trust</h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { title: 'FDA Ghana', sub: 'Food & Drugs Authority', icon: Shield },
-              { title: 'HACCP', sub: 'Hazard Analysis Critical Control Point', icon: FlaskConical },
-              { title: 'GSA', sub: 'Ghana Standards Authority', icon: Award },
-              { title: 'Made in Ghana', sub: 'Ghana Enterprises Agency', icon: Sparkles },
-            ].map((c) => (
-              <Card key={c.title} className="p-5 text-center border-gold/15 hover:shadow-brown transition-shadow">
-                <div className="h-14 w-14 rounded-2xl gradient-gold flex items-center justify-center mx-auto mb-3 shadow-gold">
-                  <c.icon className="h-7 w-7 text-brown-dark" />
-                </div>
-                <p className="font-display font-bold text-brown-dark">{c.title}</p>
-                <p className="text-xs text-brown-dark mt-1">{c.sub}</p>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
