@@ -181,8 +181,8 @@
   }
   .gradient-hero {
     background:
-      radial-gradient(ellipse at top, rgba(212, 175, 55, 0.22), transparent 60%),
-      radial-gradient(ellipse at bottom right, rgba(107, 28, 35, 0.15), transparent 60%),
+      radial-gradient(ellipse at top, rgba(212, 175, 55, 0.35), transparent 60%),
+      radial-gradient(ellipse at bottom right, rgba(107, 28, 35, 0.25), transparent 60%),
       linear-gradient(180deg, #FAF8F5 0%, #FDFBF7 100%);
   }
   .text-gradient-gold {

@@ -39,7 +39,7 @@ export function HomeSection() {
   return (
     <div>
       {/* ===== HERO ===== */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden gradient-hero">
         <div className="absolute inset-0 bg-grain opacity-40 pointer-events-none" />
         <div className="container mx-auto px-4 md:px-6 py-12 md:py-20 lg:py-28">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -176,7 +176,7 @@ export function HomeSection() {
       </section>
 
       {/* ===== TRUST BAR ===== */}
-      <section className="py-6 border-y border-gold/15">
+      <section className="py-6 border-y border-gold/15 bg-cream">
         <div className="container mx-auto px-4 md:px-6 grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { icon: Truck, label: 'Nationwide Delivery', sub: 'All 16 regions of Ghana' },
@@ -230,7 +230,7 @@ export function HomeSection() {
       </section>
 
       {/* ===== FEATURED PRODUCTS ===== */}
-      <section className="py-16 md:py-24 border-y border-gold/15">
+      <section className="py-16 md:py-24 bg-ghana-pattern border-y border-gold/15">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <div>
@@ -340,7 +340,7 @@ export function HomeSection() {
       </section>
 
       {/* ===== LATEST NEWS ===== */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-cream">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex items-end justify-between mb-10">
             <div>
@@ -428,7 +428,7 @@ function DeliveryCity({ city, eta, highlight }: { city: string; eta: string; hig
 
 export function ContactStrip() {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <Card className="overflow-hidden border-0 shadow-brown">
           <div className="grid md:grid-cols-2">

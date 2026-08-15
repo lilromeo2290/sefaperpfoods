@@ -51,7 +51,7 @@ export function CartSection() {
   }
 
   return (
-    <div className="min-h-screen pb-16">
+    <div className="min-h-screen pb-16 bg-background">
       <div className="gradient-brown text-cream py-10">
         <div className="container mx-auto px-4 md:px-6">
           <h1 className="font-display text-3xl md:text-4xl font-bold text-gold">Shopping Cart</h1>

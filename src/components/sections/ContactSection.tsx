@@ -12,7 +12,7 @@ export function ContactSection() {
   const { setChatOpen } = useApp();
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <div className="gradient-brown text-cream py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
           <Badge className="bg-cream/10 text-gold border border-gold/30">Contact Us</Badge>
