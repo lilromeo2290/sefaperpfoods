@@ -357,6 +357,7 @@ export function HomeSection() {
               {
                 tag: 'Health',
                 title: 'Why Tom Brown Beats Imported Cereal',
+                image: '/news-tom-vs-import.png',
                 excerpt: 'SBF Tom Brown is a wholesome, nutrient-rich breakfast made from carefully roasted maize, soybean, and groundnut. Unlike many imported cereals that contain added sugars and artificial ingredients, Tom Brown provides natural fibre, protein, and lasting energy to keep you active throughout the day. It is a healthy, affordable, and locally made choice for children, adults, and the entire family.',
                 showFull: true,
               },
