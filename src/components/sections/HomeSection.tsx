@@ -336,13 +336,6 @@ export function HomeSection() {
                 title: '5 Ways to Enjoy SBF Shitor',
                 image: '/news-5-ways.png',
                 excerpt: 'Experience the rich, smoky, and authentic taste of SBF Shitor, carefully prepared from quality ingredients to bring true Ghanaian flavour to every meal.',
-                ways: [
-                  'Banku & grilled tilapia',
-                  'Plain rice',
-                  'Boiled eggs',
-                  'Yam',
-                  'Plantain',
-                ],
                 excerpt2: 'SBF Shitor adds a delicious spicy kick that transforms ordinary meals into memorable dining experiences. You can also use it as a cooking ingredient to enrich soups, stews, sauces, and other local dishes. Made with love, passion, and traditional recipes — bringing the taste of Ghana to every spoonful.',
                 featured: true,
               },
@@ -387,18 +380,6 @@ export function HomeSection() {
                 <div className="p-5">
                   <h3 className="font-display font-bold text-brown-dark text-lg leading-tight">{n.title}</h3>
                   <p className={`text-sm text-brown/70 mt-2 ${(n.featured || n.showFull) ? '' : 'line-clamp-3'}`}>{n.excerpt}</p>
-                  {n.ways && (
-                    <ol className="mt-3 space-y-1.5">
-                      {n.ways.map((w, wi) => (
-                        <li key={wi} className="flex items-center gap-2 text-sm text-brown-dark">
-                          <span className="h-5 w-5 rounded-full gradient-gold text-brown-dark text-[11px] font-bold flex items-center justify-center shrink-0">
-                            {wi + 1}
-                          </span>
-                          {w}
-                        </li>
-                      ))}
-                    </ol>
-                  )}
                   {n.excerpt2 && (
                     <p className="text-sm text-brown/70 mt-3">{n.excerpt2}</p>
                   )}
