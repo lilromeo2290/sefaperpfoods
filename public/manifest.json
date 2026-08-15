@@ -1,8 +1,8 @@
 {
   "name": "Sefaperp Foods — Quality, Taste and Trust",
   "short_name": "Sefaperp Foods",
-  "description": "Authentic Ghanaian food products from Dzodze, Volta Region. Quality, Taste and Trust. Shop Shitor, Tom Brown and more — fresh delivery across Ghana.",
-  "start_url": "/",
+  "description": "Shop authentic Ghanaian Shitor, Tom Brown Powder and more from Sefaperp Foods in Dzodze, Volta Region. Quality, Taste and Trust. Order online, pay with Mobile Money or card, and get fresh delivery to your door. Install this app for fast ordering, offline access, and order tracking.",
+  "start_url": "/?source=pwa",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
@@ -29,19 +29,29 @@
     {
       "name": "Shop Products",
       "short_name": "Shop",
-      "url": "/?view=products",
+      "description": "Browse and order our authentic Ghanaian food products",
+      "url": "/?view=products&source=shortcut",
       "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Track My Order",
       "short_name": "Track",
-      "url": "/?view=account",
+      "description": "Check the status of your delivery",
+      "url": "/?view=account&source=shortcut",
       "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Become a Distributor",
       "short_name": "Distributor",
-      "url": "/?view=distributor",
+      "description": "Apply to become a Sefaperp Foods distributor",
+      "url": "/?view=distributor&source=shortcut",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Call, WhatsApp, or message us",
+      "url": "/?view=contact&source=shortcut",
       "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
     }
   ],
@@ -50,7 +60,7 @@
       "src": "/icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "form_factor": "wide",
+      "form_factor": "narrow",
       "label": "Sefaperp Foods storefront"
     }
   ]

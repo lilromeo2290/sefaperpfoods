@@ -6,6 +6,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { CartDrawer } from '@/components/layout/CartDrawer';
 import { PWAInstallPrompt } from '@/components/layout/PWAInstallPrompt';
+import { MobileInstallButton } from '@/components/layout/MobileInstallButton';
 import { SupportWidget } from '@/components/widgets/SupportWidget';
 import { HomeSection } from '@/components/sections/HomeSection';
 import { AboutSection } from '@/components/sections/AboutSection';
@@ -53,6 +54,7 @@ export default function Home() {
       <CartDrawer />
       <SupportWidget />
       <PWAInstallPrompt />
+      <MobileInstallButton />
     </div>
   );
 }
