@@ -91,10 +91,10 @@ export function AdminSection() {
             <p className="text-cream/70 text-sm">Welcome back, {authUser.name} • Sefaperp Foods Control Center</p>
           </div>
           <div className="flex gap-2">
-            <Button variant="outline" size="sm" className="border-cream/30 text-cream hover:bg-cream/10" onClick={() => toast.info('Exporting report...')}>
+            <Button size="sm" className="bg-cream/10 border border-cream/40 text-cream hover:bg-cream/20 hover:text-gold" onClick={() => toast.info('Exporting report...')}>
               <Download className="h-4 w-4 mr-1" /> Export
             </Button>
-            <Button variant="outline" size="sm" className="border-cream/30 text-cream hover:bg-cream/10" onClick={logout}>
+            <Button size="sm" className="gradient-gold text-brown-dark hover:opacity-90 font-semibold border border-gold" onClick={logout}>
               Sign Out
             </Button>
           </div>
