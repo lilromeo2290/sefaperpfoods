@@ -130,6 +130,19 @@ export function Footer() {
             <a href="#" className="hover:text-gold">Refund Policy</a>
           </div>
         </div>
+        <div className="border-t border-cream/10">
+          <div className="container mx-auto px-4 md:px-6 py-3 flex items-center justify-center gap-1.5 text-xs text-cream/70">
+            <span>Powered and Developed by:</span>
+            <a
+              href="https://clipeconsult.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-gold hover:text-gold-light transition-colors"
+            >
+              CLIPE CONSULT
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   );
