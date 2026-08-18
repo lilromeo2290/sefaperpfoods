@@ -162,3 +162,4 @@ export default function RootLayout({
     </html>
   );
 }
+<!-- Vercel auto-deploy verified: Tue Aug 18 10:34:42 UTC 2026 -->
